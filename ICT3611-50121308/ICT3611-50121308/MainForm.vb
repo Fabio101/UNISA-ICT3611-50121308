@@ -12,7 +12,7 @@
         End If
     End Function
 
-    'Checks if suppliedtextbox containsonly alphabetic characters
+    'Checks if supplied textbox containsonly alphabetic characters
     Private Function IsLetter(textbox As TextBox, name As String) As Boolean
         If Char.IsLetter(textbox.Text.Chars(textbox.Text.Length - 1)) = False Then
             MessageBox.Show(name & " requires only alphabetic characters.", "Entry Error")
