@@ -44,12 +44,21 @@ Partial Class MainForm
         Me.txtInit = New System.Windows.Forms.TextBox()
         Me.txtSurname = New System.Windows.Forms.TextBox()
         Me.txtAddress = New System.Windows.Forms.TextBox()
-        Me.datePicker = New System.Windows.Forms.DateTimePicker()
+        Me.dateDob = New System.Windows.Forms.DateTimePicker()
         Me.radioMale = New System.Windows.Forms.RadioButton()
         Me.radioFemale = New System.Windows.Forms.RadioButton()
+        Me.pnlModuleReg = New System.Windows.Forms.Panel()
+        Me.lblModuleRegMain = New System.Windows.Forms.Label()
+        Me.lblModCode = New System.Windows.Forms.Label()
+        Me.txtModCode = New System.Windows.Forms.TextBox()
+        Me.lblModTitle = New System.Windows.Forms.Label()
+        Me.txtModTitle = New System.Windows.Forms.TextBox()
+        Me.lblActivationSem = New System.Windows.Forms.Label()
+        Me.dateActivation = New System.Windows.Forms.DateTimePicker()
         Me.Functions.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.pnlStudentReg.SuspendLayout()
+        Me.pnlModuleReg.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnStudentReg
@@ -103,8 +112,9 @@ Partial Class MainForm
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.pnlStudentReg)
+        Me.GroupBox1.Controls.Add(Me.pnlModuleReg)
         Me.GroupBox1.Controls.Add(Me.lblInfo)
+        Me.GroupBox1.Controls.Add(Me.pnlStudentReg)
         Me.GroupBox1.Location = New System.Drawing.Point(148, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(526, 289)
@@ -145,7 +155,7 @@ Partial Class MainForm
         '
         Me.pnlStudentReg.Controls.Add(Me.radioFemale)
         Me.pnlStudentReg.Controls.Add(Me.radioMale)
-        Me.pnlStudentReg.Controls.Add(Me.datePicker)
+        Me.pnlStudentReg.Controls.Add(Me.dateDob)
         Me.pnlStudentReg.Controls.Add(Me.txtAddress)
         Me.pnlStudentReg.Controls.Add(Me.txtSurname)
         Me.pnlStudentReg.Controls.Add(Me.txtInit)
@@ -255,12 +265,12 @@ Partial Class MainForm
         Me.txtAddress.Size = New System.Drawing.Size(414, 91)
         Me.txtAddress.TabIndex = 10
         '
-        'datePicker
+        'dateDob
         '
-        Me.datePicker.Location = New System.Drawing.Point(88, 177)
-        Me.datePicker.Name = "datePicker"
-        Me.datePicker.Size = New System.Drawing.Size(200, 20)
-        Me.datePicker.TabIndex = 11
+        Me.dateDob.Location = New System.Drawing.Point(88, 177)
+        Me.dateDob.Name = "dateDob"
+        Me.dateDob.Size = New System.Drawing.Size(200, 20)
+        Me.dateDob.TabIndex = 11
         '
         'radioMale
         '
@@ -284,6 +294,78 @@ Partial Class MainForm
         Me.radioFemale.Text = "Female"
         Me.radioFemale.UseVisualStyleBackColor = True
         '
+        'pnlModuleReg
+        '
+        Me.pnlModuleReg.Controls.Add(Me.dateActivation)
+        Me.pnlModuleReg.Controls.Add(Me.lblActivationSem)
+        Me.pnlModuleReg.Controls.Add(Me.txtModTitle)
+        Me.pnlModuleReg.Controls.Add(Me.lblModTitle)
+        Me.pnlModuleReg.Controls.Add(Me.txtModCode)
+        Me.pnlModuleReg.Controls.Add(Me.lblModCode)
+        Me.pnlModuleReg.Controls.Add(Me.lblModuleRegMain)
+        Me.pnlModuleReg.Location = New System.Drawing.Point(6, 19)
+        Me.pnlModuleReg.Name = "pnlModuleReg"
+        Me.pnlModuleReg.Size = New System.Drawing.Size(514, 264)
+        Me.pnlModuleReg.TabIndex = 14
+        Me.pnlModuleReg.Visible = False
+        '
+        'lblModuleRegMain
+        '
+        Me.lblModuleRegMain.AutoSize = True
+        Me.lblModuleRegMain.Location = New System.Drawing.Point(4, 10)
+        Me.lblModuleRegMain.Name = "lblModuleRegMain"
+        Me.lblModuleRegMain.Size = New System.Drawing.Size(83, 13)
+        Me.lblModuleRegMain.TabIndex = 0
+        Me.lblModuleRegMain.Text = "Module Details :"
+        '
+        'lblModCode
+        '
+        Me.lblModCode.AutoSize = True
+        Me.lblModCode.Location = New System.Drawing.Point(7, 38)
+        Me.lblModCode.Name = "lblModCode"
+        Me.lblModCode.Size = New System.Drawing.Size(79, 13)
+        Me.lblModCode.TabIndex = 1
+        Me.lblModCode.Text = "Module Code : "
+        '
+        'txtModCode
+        '
+        Me.txtModCode.Location = New System.Drawing.Point(88, 35)
+        Me.txtModCode.Name = "txtModCode"
+        Me.txtModCode.Size = New System.Drawing.Size(100, 20)
+        Me.txtModCode.TabIndex = 2
+        '
+        'lblModTitle
+        '
+        Me.lblModTitle.AutoSize = True
+        Me.lblModTitle.Location = New System.Drawing.Point(7, 71)
+        Me.lblModTitle.Name = "lblModTitle"
+        Me.lblModTitle.Size = New System.Drawing.Size(74, 13)
+        Me.lblModTitle.TabIndex = 3
+        Me.lblModTitle.Text = "Module Title : "
+        '
+        'txtModTitle
+        '
+        Me.txtModTitle.Location = New System.Drawing.Point(88, 68)
+        Me.txtModTitle.Name = "txtModTitle"
+        Me.txtModTitle.Size = New System.Drawing.Size(100, 20)
+        Me.txtModTitle.TabIndex = 4
+        '
+        'lblActivationSem
+        '
+        Me.lblActivationSem.AutoSize = True
+        Me.lblActivationSem.Location = New System.Drawing.Point(10, 112)
+        Me.lblActivationSem.Name = "lblActivationSem"
+        Me.lblActivationSem.Size = New System.Drawing.Size(110, 13)
+        Me.lblActivationSem.TabIndex = 5
+        Me.lblActivationSem.Text = "Activation Semester : "
+        '
+        'dateActivation
+        '
+        Me.dateActivation.Location = New System.Drawing.Point(126, 112)
+        Me.dateActivation.Name = "dateActivation"
+        Me.dateActivation.Size = New System.Drawing.Size(200, 20)
+        Me.dateActivation.TabIndex = 6
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -302,6 +384,8 @@ Partial Class MainForm
         Me.GroupBox1.PerformLayout()
         Me.pnlStudentReg.ResumeLayout(False)
         Me.pnlStudentReg.PerformLayout()
+        Me.pnlModuleReg.ResumeLayout(False)
+        Me.pnlModuleReg.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -327,8 +411,16 @@ Partial Class MainForm
     Friend WithEvents txtInit As System.Windows.Forms.TextBox
     Friend WithEvents txtSurname As System.Windows.Forms.TextBox
     Friend WithEvents txtAddress As System.Windows.Forms.TextBox
-    Friend WithEvents datePicker As System.Windows.Forms.DateTimePicker
+    Friend WithEvents dateDob As System.Windows.Forms.DateTimePicker
     Friend WithEvents radioFemale As System.Windows.Forms.RadioButton
     Friend WithEvents radioMale As System.Windows.Forms.RadioButton
+    Friend WithEvents pnlModuleReg As System.Windows.Forms.Panel
+    Friend WithEvents lblModuleRegMain As System.Windows.Forms.Label
+    Friend WithEvents lblModCode As System.Windows.Forms.Label
+    Friend WithEvents txtModCode As System.Windows.Forms.TextBox
+    Friend WithEvents lblModTitle As System.Windows.Forms.Label
+    Friend WithEvents txtModTitle As System.Windows.Forms.TextBox
+    Friend WithEvents lblActivationSem As System.Windows.Forms.Label
+    Friend WithEvents dateActivation As System.Windows.Forms.DateTimePicker
 
 End Class
