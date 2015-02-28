@@ -98,12 +98,11 @@ Partial Class MainForm
         'lblInfo
         '
         Me.lblInfo.AutoSize = True
-        Me.lblInfo.Location = New System.Drawing.Point(129, 118)
+        Me.lblInfo.Location = New System.Drawing.Point(206, 132)
         Me.lblInfo.Name = "lblInfo"
-        Me.lblInfo.Size = New System.Drawing.Size(231, 39)
+        Me.lblInfo.Size = New System.Drawing.Size(116, 13)
         Me.lblInfo.TabIndex = 0
-        Me.lblInfo.Text = "Orange Univeristy System System:" & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & Global.Microsoft.VisualBasic.ChrW(13) & Global.Microsoft.VisualBasic.ChrW(10) & "Select a function from the left menu to proce" & _
-    "ed."
+        Me.lblInfo.Text = "SELECT A FUNCTION"
         Me.lblInfo.Visible = False
         '
         'btnSave
@@ -114,6 +113,7 @@ Partial Class MainForm
         Me.btnSave.TabIndex = 6
         Me.btnSave.Text = "Save"
         Me.btnSave.UseVisualStyleBackColor = True
+        Me.btnSave.Visible = False
         '
         'btnClose
         '
@@ -133,7 +133,9 @@ Partial Class MainForm
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.GroupBox1)
         Me.Controls.Add(Me.Functions)
+        Me.MaximizeBox = False
         Me.Name = "MainForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "Orange University - Student System"
         Me.Functions.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
