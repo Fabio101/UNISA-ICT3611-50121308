@@ -11,6 +11,7 @@
     Private Sub btnStudentReg_Click(sender As Object, e As EventArgs) Handles btnStudentReg.Click
         lblInfo.Visible = False
         btnSave.Visible = True
+        pnlStudentReg.Visible = True
     End Sub
 
     Private Sub btnModuleReg_Click(sender As Object, e As EventArgs) Handles btnModuleReg.Click
