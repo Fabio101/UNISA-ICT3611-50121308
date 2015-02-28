@@ -112,9 +112,9 @@ Partial Class MainForm
         '
         'GroupBox1
         '
-        Me.GroupBox1.Controls.Add(Me.pnlModuleReg)
-        Me.GroupBox1.Controls.Add(Me.lblInfo)
         Me.GroupBox1.Controls.Add(Me.pnlStudentReg)
+        Me.GroupBox1.Controls.Add(Me.lblInfo)
+        Me.GroupBox1.Controls.Add(Me.pnlModuleReg)
         Me.GroupBox1.Location = New System.Drawing.Point(148, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(526, 289)
@@ -267,6 +267,7 @@ Partial Class MainForm
         '
         'dateDob
         '
+        Me.dateDob.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dateDob.Location = New System.Drawing.Point(88, 177)
         Me.dateDob.Name = "dateDob"
         Me.dateDob.Size = New System.Drawing.Size(200, 20)
@@ -361,6 +362,7 @@ Partial Class MainForm
         '
         'dateActivation
         '
+        Me.dateActivation.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
         Me.dateActivation.Location = New System.Drawing.Point(126, 112)
         Me.dateActivation.Name = "dateActivation"
         Me.dateActivation.Size = New System.Drawing.Size(200, 20)
