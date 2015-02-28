@@ -1,1 +1,10 @@
 C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\bin\Debug\ICT3611-50121308.exe.config
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\bin\Debug\ICT3611-50121308.exe
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\bin\Debug\ICT3611-50121308.pdb
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\bin\Debug\ICT3611-50121308.xml
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\obj\Debug\ICT3611_50121308.MainForm.resources
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\obj\Debug\ICT3611_50121308.Resources.resources
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\obj\Debug\ICT3611-50121308.vbproj.GenerateResource.Cache
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\obj\Debug\ICT3611-50121308.exe
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\obj\Debug\ICT3611-50121308.xml
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\obj\Debug\ICT3611-50121308.pdb
