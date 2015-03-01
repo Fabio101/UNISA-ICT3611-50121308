@@ -45,16 +45,16 @@ Partial Class MainForm
         Me.lblStudentRegMain = New System.Windows.Forms.Label()
         Me.lblInfo = New System.Windows.Forms.Label()
         Me.pnlModuleReg = New System.Windows.Forms.Panel()
-        Me.dateActivation = New System.Windows.Forms.DateTimePicker()
         Me.lblActivationSem = New System.Windows.Forms.Label()
         Me.txtModTitle = New System.Windows.Forms.TextBox()
         Me.lblModTitle = New System.Windows.Forms.Label()
         Me.txtModCode = New System.Windows.Forms.TextBox()
         Me.lblModCode = New System.Windows.Forms.Label()
         Me.lblModuleRegMain = New System.Windows.Forms.Label()
-        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
+        Me.chk1 = New System.Windows.Forms.CheckBox()
+        Me.chk2 = New System.Windows.Forms.CheckBox()
         Me.Functions.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.pnlStudentReg.SuspendLayout()
@@ -112,9 +112,9 @@ Partial Class MainForm
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.pnlModuleReg)
         Me.GroupBox1.Controls.Add(Me.pnlStudentReg)
         Me.GroupBox1.Controls.Add(Me.lblInfo)
-        Me.GroupBox1.Controls.Add(Me.pnlModuleReg)
         Me.GroupBox1.Location = New System.Drawing.Point(148, 12)
         Me.GroupBox1.Name = "GroupBox1"
         Me.GroupBox1.Size = New System.Drawing.Size(526, 289)
@@ -172,7 +172,7 @@ Partial Class MainForm
         Me.dateDob.Format = System.Windows.Forms.DateTimePickerFormat.Custom
         Me.dateDob.Location = New System.Drawing.Point(88, 112)
         Me.dateDob.Name = "dateDob"
-        Me.dateDob.Size = New System.Drawing.Size(200, 20)
+        Me.dateDob.Size = New System.Drawing.Size(90, 20)
         Me.dateDob.TabIndex = 11
         '
         'txtAddress
@@ -278,7 +278,8 @@ Partial Class MainForm
         '
         'pnlModuleReg
         '
-        Me.pnlModuleReg.Controls.Add(Me.dateActivation)
+        Me.pnlModuleReg.Controls.Add(Me.chk2)
+        Me.pnlModuleReg.Controls.Add(Me.chk1)
         Me.pnlModuleReg.Controls.Add(Me.lblActivationSem)
         Me.pnlModuleReg.Controls.Add(Me.txtModTitle)
         Me.pnlModuleReg.Controls.Add(Me.lblModTitle)
@@ -290,14 +291,6 @@ Partial Class MainForm
         Me.pnlModuleReg.Size = New System.Drawing.Size(514, 264)
         Me.pnlModuleReg.TabIndex = 14
         Me.pnlModuleReg.Visible = False
-        '
-        'dateActivation
-        '
-        Me.dateActivation.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dateActivation.Location = New System.Drawing.Point(126, 112)
-        Me.dateActivation.Name = "dateActivation"
-        Me.dateActivation.Size = New System.Drawing.Size(200, 20)
-        Me.dateActivation.TabIndex = 6
         '
         'lblActivationSem
         '
@@ -368,6 +361,26 @@ Partial Class MainForm
         Me.btnClose.Text = "Close"
         Me.btnClose.UseVisualStyleBackColor = True
         '
+        'chk1
+        '
+        Me.chk1.AutoSize = True
+        Me.chk1.Location = New System.Drawing.Point(127, 112)
+        Me.chk1.Name = "chk1"
+        Me.chk1.Size = New System.Drawing.Size(87, 17)
+        Me.chk1.TabIndex = 6
+        Me.chk1.Text = "1st Semester"
+        Me.chk1.UseVisualStyleBackColor = True
+        '
+        'chk2
+        '
+        Me.chk2.AutoSize = True
+        Me.chk2.Location = New System.Drawing.Point(127, 138)
+        Me.chk2.Name = "chk2"
+        Me.chk2.Size = New System.Drawing.Size(91, 17)
+        Me.chk2.TabIndex = 7
+        Me.chk2.Text = "2nd Semester"
+        Me.chk2.UseVisualStyleBackColor = True
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -398,7 +411,6 @@ Partial Class MainForm
     Friend WithEvents Functions As System.Windows.Forms.GroupBox
     Friend WithEvents GroupBox1 As System.Windows.Forms.GroupBox
     Friend WithEvents lblInfo As System.Windows.Forms.Label
-    Friend WithEvents BackgroundWorker1 As System.ComponentModel.BackgroundWorker
     Friend WithEvents btnSave As System.Windows.Forms.Button
     Friend WithEvents btnClose As System.Windows.Forms.Button
     Friend WithEvents pnlStudentReg As System.Windows.Forms.Panel
@@ -423,6 +435,7 @@ Partial Class MainForm
     Friend WithEvents lblModTitle As System.Windows.Forms.Label
     Friend WithEvents txtModTitle As System.Windows.Forms.TextBox
     Friend WithEvents lblActivationSem As System.Windows.Forms.Label
-    Friend WithEvents dateActivation As System.Windows.Forms.DateTimePicker
+    Friend WithEvents chk1 As System.Windows.Forms.CheckBox
+    Friend WithEvents chk2 As System.Windows.Forms.CheckBox
 
 End Class
