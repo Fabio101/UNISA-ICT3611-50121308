@@ -139,7 +139,7 @@ Public Class MainForm
 
                 Dim student As Student.Student
                 student = New Student.Student(txtTitle.Text, txtInit.Text, txtSurname.Text, txtAddress.Text, dateDob.Text, gender)
-                MessageBox.Show("Student Number : " & student.StudentNumber & vbCrLf & "Student : " & student.Title & " " & student.Surname & vbCrLf & "Address : " & student.Address & vbCrLf & "Gender : " & student.Gender & vbCrLf & "Date of Birth : " & student.DoB, "Success")
+                MessageBox.Show("Student Number : " & student.StudentNumber & vbCrLf & "Student : " & student.Initial & student.Title & " " & student.Surname & vbCrLf & "Address : " & student.Address & vbCrLf & "Gender : " & student.Gender & vbCrLf & "Date of Birth : " & student.DoB, "Success")
             End If
 
             Application.Restart()
