@@ -1,0 +1,14 @@
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\bin\Release\ICT3611-50121308.exe.config
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\bin\Release\ICT3611-50121308.exe
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\bin\Release\ICT3611-50121308.pdb
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\bin\Release\ICT3611-50121308.xml
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\bin\Release\Student.dll
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\bin\Release\Student.pdb
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\bin\Release\Student.xml
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\obj\Release\ICT3611-50121308.vbprojResolveAssemblyReference.cache
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\obj\Release\ICT3611_50121308.MainForm.resources
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\obj\Release\ICT3611_50121308.Resources.resources
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\obj\Release\ICT3611-50121308.vbproj.GenerateResource.Cache
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\obj\Release\ICT3611-50121308.exe
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\obj\Release\ICT3611-50121308.xml
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\obj\Release\ICT3611-50121308.pdb

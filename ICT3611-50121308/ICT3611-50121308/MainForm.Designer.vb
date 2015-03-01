@@ -28,33 +28,33 @@ Partial Class MainForm
         Me.btnStudentEnroll = New System.Windows.Forms.Button()
         Me.Functions = New System.Windows.Forms.GroupBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
-        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
+        Me.pnlStudentReg = New System.Windows.Forms.Panel()
+        Me.radioFemale = New System.Windows.Forms.RadioButton()
+        Me.radioMale = New System.Windows.Forms.RadioButton()
+        Me.dateDob = New System.Windows.Forms.DateTimePicker()
+        Me.txtAddress = New System.Windows.Forms.TextBox()
+        Me.txtSurname = New System.Windows.Forms.TextBox()
+        Me.txtInit = New System.Windows.Forms.TextBox()
+        Me.txtTitle = New System.Windows.Forms.TextBox()
+        Me.lblGender = New System.Windows.Forms.Label()
+        Me.lblDob = New System.Windows.Forms.Label()
+        Me.lblAddress = New System.Windows.Forms.Label()
+        Me.lblStudentSur = New System.Windows.Forms.Label()
+        Me.lblStudentInit = New System.Windows.Forms.Label()
+        Me.lblStudentTitle = New System.Windows.Forms.Label()
+        Me.lblStudentRegMain = New System.Windows.Forms.Label()
         Me.lblInfo = New System.Windows.Forms.Label()
+        Me.pnlModuleReg = New System.Windows.Forms.Panel()
+        Me.dateActivation = New System.Windows.Forms.DateTimePicker()
+        Me.lblActivationSem = New System.Windows.Forms.Label()
+        Me.txtModTitle = New System.Windows.Forms.TextBox()
+        Me.lblModTitle = New System.Windows.Forms.Label()
+        Me.txtModCode = New System.Windows.Forms.TextBox()
+        Me.lblModCode = New System.Windows.Forms.Label()
+        Me.lblModuleRegMain = New System.Windows.Forms.Label()
+        Me.BackgroundWorker1 = New System.ComponentModel.BackgroundWorker()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
-        Me.pnlStudentReg = New System.Windows.Forms.Panel()
-        Me.lblStudentRegMain = New System.Windows.Forms.Label()
-        Me.lblStudentTitle = New System.Windows.Forms.Label()
-        Me.lblStudentInit = New System.Windows.Forms.Label()
-        Me.lblStudentSur = New System.Windows.Forms.Label()
-        Me.lblAddress = New System.Windows.Forms.Label()
-        Me.lblDob = New System.Windows.Forms.Label()
-        Me.lblGender = New System.Windows.Forms.Label()
-        Me.txtTitle = New System.Windows.Forms.TextBox()
-        Me.txtInit = New System.Windows.Forms.TextBox()
-        Me.txtSurname = New System.Windows.Forms.TextBox()
-        Me.txtAddress = New System.Windows.Forms.TextBox()
-        Me.dateDob = New System.Windows.Forms.DateTimePicker()
-        Me.radioMale = New System.Windows.Forms.RadioButton()
-        Me.radioFemale = New System.Windows.Forms.RadioButton()
-        Me.pnlModuleReg = New System.Windows.Forms.Panel()
-        Me.lblModuleRegMain = New System.Windows.Forms.Label()
-        Me.lblModCode = New System.Windows.Forms.Label()
-        Me.txtModCode = New System.Windows.Forms.TextBox()
-        Me.lblModTitle = New System.Windows.Forms.Label()
-        Me.txtModTitle = New System.Windows.Forms.TextBox()
-        Me.lblActivationSem = New System.Windows.Forms.Label()
-        Me.dateActivation = New System.Windows.Forms.DateTimePicker()
         Me.Functions.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.pnlStudentReg.SuspendLayout()
@@ -122,35 +122,6 @@ Partial Class MainForm
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Details"
         '
-        'lblInfo
-        '
-        Me.lblInfo.AutoSize = True
-        Me.lblInfo.Location = New System.Drawing.Point(206, 132)
-        Me.lblInfo.Name = "lblInfo"
-        Me.lblInfo.Size = New System.Drawing.Size(116, 13)
-        Me.lblInfo.TabIndex = 0
-        Me.lblInfo.Text = "SELECT A FUNCTION"
-        Me.lblInfo.Visible = False
-        '
-        'btnSave
-        '
-        Me.btnSave.Location = New System.Drawing.Point(468, 307)
-        Me.btnSave.Name = "btnSave"
-        Me.btnSave.Size = New System.Drawing.Size(100, 37)
-        Me.btnSave.TabIndex = 6
-        Me.btnSave.Text = "Save"
-        Me.btnSave.UseVisualStyleBackColor = True
-        Me.btnSave.Visible = False
-        '
-        'btnClose
-        '
-        Me.btnClose.Location = New System.Drawing.Point(574, 307)
-        Me.btnClose.Name = "btnClose"
-        Me.btnClose.Size = New System.Drawing.Size(100, 37)
-        Me.btnClose.TabIndex = 7
-        Me.btnClose.Text = "Close"
-        Me.btnClose.UseVisualStyleBackColor = True
-        '
         'pnlStudentReg
         '
         Me.pnlStudentReg.Controls.Add(Me.radioFemale)
@@ -173,41 +144,82 @@ Partial Class MainForm
         Me.pnlStudentReg.TabIndex = 1
         Me.pnlStudentReg.Visible = False
         '
-        'lblStudentRegMain
+        'radioFemale
         '
-        Me.lblStudentRegMain.AutoSize = True
-        Me.lblStudentRegMain.Location = New System.Drawing.Point(4, 10)
-        Me.lblStudentRegMain.Name = "lblStudentRegMain"
-        Me.lblStudentRegMain.Size = New System.Drawing.Size(85, 13)
-        Me.lblStudentRegMain.TabIndex = 0
-        Me.lblStudentRegMain.Text = "Student Details :"
+        Me.radioFemale.AutoSize = True
+        Me.radioFemale.Location = New System.Drawing.Point(119, 149)
+        Me.radioFemale.Name = "radioFemale"
+        Me.radioFemale.Size = New System.Drawing.Size(59, 17)
+        Me.radioFemale.TabIndex = 13
+        Me.radioFemale.TabStop = True
+        Me.radioFemale.Text = "Female"
+        Me.radioFemale.UseVisualStyleBackColor = True
         '
-        'lblStudentTitle
+        'radioMale
         '
-        Me.lblStudentTitle.AutoSize = True
-        Me.lblStudentTitle.Location = New System.Drawing.Point(4, 38)
-        Me.lblStudentTitle.Name = "lblStudentTitle"
-        Me.lblStudentTitle.Size = New System.Drawing.Size(33, 13)
-        Me.lblStudentTitle.TabIndex = 1
-        Me.lblStudentTitle.Text = "Title :"
+        Me.radioMale.AutoSize = True
+        Me.radioMale.Location = New System.Drawing.Point(65, 149)
+        Me.radioMale.Name = "radioMale"
+        Me.radioMale.Size = New System.Drawing.Size(48, 17)
+        Me.radioMale.TabIndex = 12
+        Me.radioMale.TabStop = True
+        Me.radioMale.Text = "Male"
+        Me.radioMale.UseVisualStyleBackColor = True
         '
-        'lblStudentInit
+        'dateDob
         '
-        Me.lblStudentInit.AutoSize = True
-        Me.lblStudentInit.Location = New System.Drawing.Point(110, 38)
-        Me.lblStudentInit.Name = "lblStudentInit"
-        Me.lblStudentInit.Size = New System.Drawing.Size(42, 13)
-        Me.lblStudentInit.TabIndex = 2
-        Me.lblStudentInit.Text = "Initials :"
+        Me.dateDob.CustomFormat = "mm/dd/yyyy"
+        Me.dateDob.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dateDob.Location = New System.Drawing.Point(88, 112)
+        Me.dateDob.Name = "dateDob"
+        Me.dateDob.Size = New System.Drawing.Size(200, 20)
+        Me.dateDob.TabIndex = 11
         '
-        'lblStudentSur
+        'txtAddress
         '
-        Me.lblStudentSur.AutoSize = True
-        Me.lblStudentSur.Location = New System.Drawing.Point(261, 38)
-        Me.lblStudentSur.Name = "lblStudentSur"
-        Me.lblStudentSur.Size = New System.Drawing.Size(55, 13)
-        Me.lblStudentSur.TabIndex = 3
-        Me.lblStudentSur.Text = "Surname :"
+        Me.txtAddress.Location = New System.Drawing.Point(65, 71)
+        Me.txtAddress.Name = "txtAddress"
+        Me.txtAddress.Size = New System.Drawing.Size(414, 20)
+        Me.txtAddress.TabIndex = 10
+        '
+        'txtSurname
+        '
+        Me.txtSurname.Location = New System.Drawing.Point(323, 35)
+        Me.txtSurname.Name = "txtSurname"
+        Me.txtSurname.Size = New System.Drawing.Size(156, 20)
+        Me.txtSurname.TabIndex = 9
+        '
+        'txtInit
+        '
+        Me.txtInit.Location = New System.Drawing.Point(159, 35)
+        Me.txtInit.Name = "txtInit"
+        Me.txtInit.Size = New System.Drawing.Size(96, 20)
+        Me.txtInit.TabIndex = 8
+        '
+        'txtTitle
+        '
+        Me.txtTitle.Location = New System.Drawing.Point(43, 35)
+        Me.txtTitle.Name = "txtTitle"
+        Me.txtTitle.Size = New System.Drawing.Size(61, 20)
+        Me.txtTitle.TabIndex = 7
+        '
+        'lblGender
+        '
+        Me.lblGender.AutoSize = True
+        Me.lblGender.Location = New System.Drawing.Point(7, 149)
+        Me.lblGender.Name = "lblGender"
+        Me.lblGender.Size = New System.Drawing.Size(48, 13)
+        Me.lblGender.TabIndex = 6
+        Me.lblGender.Text = "Gender :"
+        '
+        'lblDob
+        '
+        Me.lblDob.AutoSize = True
+        Me.lblDob.Location = New System.Drawing.Point(7, 112)
+        Me.lblDob.Name = "lblDob"
+        Me.lblDob.Size = New System.Drawing.Size(75, 13)
+        Me.lblDob.TabIndex = 5
+        Me.lblDob.Text = "Date of Birth : "
         '
         'lblAddress
         '
@@ -218,82 +230,51 @@ Partial Class MainForm
         Me.lblAddress.TabIndex = 4
         Me.lblAddress.Text = "Address :"
         '
-        'lblDob
+        'lblStudentSur
         '
-        Me.lblDob.AutoSize = True
-        Me.lblDob.Location = New System.Drawing.Point(7, 177)
-        Me.lblDob.Name = "lblDob"
-        Me.lblDob.Size = New System.Drawing.Size(75, 13)
-        Me.lblDob.TabIndex = 5
-        Me.lblDob.Text = "Date of Birth : "
+        Me.lblStudentSur.AutoSize = True
+        Me.lblStudentSur.Location = New System.Drawing.Point(261, 38)
+        Me.lblStudentSur.Name = "lblStudentSur"
+        Me.lblStudentSur.Size = New System.Drawing.Size(55, 13)
+        Me.lblStudentSur.TabIndex = 3
+        Me.lblStudentSur.Text = "Surname :"
         '
-        'lblGender
+        'lblStudentInit
         '
-        Me.lblGender.AutoSize = True
-        Me.lblGender.Location = New System.Drawing.Point(7, 214)
-        Me.lblGender.Name = "lblGender"
-        Me.lblGender.Size = New System.Drawing.Size(48, 13)
-        Me.lblGender.TabIndex = 6
-        Me.lblGender.Text = "Gender :"
+        Me.lblStudentInit.AutoSize = True
+        Me.lblStudentInit.Location = New System.Drawing.Point(110, 38)
+        Me.lblStudentInit.Name = "lblStudentInit"
+        Me.lblStudentInit.Size = New System.Drawing.Size(42, 13)
+        Me.lblStudentInit.TabIndex = 2
+        Me.lblStudentInit.Text = "Initials :"
         '
-        'txtTitle
+        'lblStudentTitle
         '
-        Me.txtTitle.Location = New System.Drawing.Point(43, 35)
-        Me.txtTitle.Name = "txtTitle"
-        Me.txtTitle.Size = New System.Drawing.Size(61, 20)
-        Me.txtTitle.TabIndex = 7
+        Me.lblStudentTitle.AutoSize = True
+        Me.lblStudentTitle.Location = New System.Drawing.Point(4, 38)
+        Me.lblStudentTitle.Name = "lblStudentTitle"
+        Me.lblStudentTitle.Size = New System.Drawing.Size(33, 13)
+        Me.lblStudentTitle.TabIndex = 1
+        Me.lblStudentTitle.Text = "Title :"
         '
-        'txtInit
+        'lblStudentRegMain
         '
-        Me.txtInit.Location = New System.Drawing.Point(159, 35)
-        Me.txtInit.Name = "txtInit"
-        Me.txtInit.Size = New System.Drawing.Size(96, 20)
-        Me.txtInit.TabIndex = 8
+        Me.lblStudentRegMain.AutoSize = True
+        Me.lblStudentRegMain.Location = New System.Drawing.Point(4, 10)
+        Me.lblStudentRegMain.Name = "lblStudentRegMain"
+        Me.lblStudentRegMain.Size = New System.Drawing.Size(85, 13)
+        Me.lblStudentRegMain.TabIndex = 0
+        Me.lblStudentRegMain.Text = "Student Details :"
         '
-        'txtSurname
+        'lblInfo
         '
-        Me.txtSurname.Location = New System.Drawing.Point(323, 35)
-        Me.txtSurname.Name = "txtSurname"
-        Me.txtSurname.Size = New System.Drawing.Size(156, 20)
-        Me.txtSurname.TabIndex = 9
-        '
-        'txtAddress
-        '
-        Me.txtAddress.Location = New System.Drawing.Point(65, 71)
-        Me.txtAddress.Multiline = True
-        Me.txtAddress.Name = "txtAddress"
-        Me.txtAddress.Size = New System.Drawing.Size(414, 91)
-        Me.txtAddress.TabIndex = 10
-        '
-        'dateDob
-        '
-        Me.dateDob.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dateDob.Location = New System.Drawing.Point(88, 177)
-        Me.dateDob.Name = "dateDob"
-        Me.dateDob.Size = New System.Drawing.Size(200, 20)
-        Me.dateDob.TabIndex = 11
-        '
-        'radioMale
-        '
-        Me.radioMale.AutoSize = True
-        Me.radioMale.Location = New System.Drawing.Point(65, 214)
-        Me.radioMale.Name = "radioMale"
-        Me.radioMale.Size = New System.Drawing.Size(48, 17)
-        Me.radioMale.TabIndex = 12
-        Me.radioMale.TabStop = True
-        Me.radioMale.Text = "Male"
-        Me.radioMale.UseVisualStyleBackColor = True
-        '
-        'radioFemale
-        '
-        Me.radioFemale.AutoSize = True
-        Me.radioFemale.Location = New System.Drawing.Point(119, 214)
-        Me.radioFemale.Name = "radioFemale"
-        Me.radioFemale.Size = New System.Drawing.Size(59, 17)
-        Me.radioFemale.TabIndex = 13
-        Me.radioFemale.TabStop = True
-        Me.radioFemale.Text = "Female"
-        Me.radioFemale.UseVisualStyleBackColor = True
+        Me.lblInfo.AutoSize = True
+        Me.lblInfo.Location = New System.Drawing.Point(206, 132)
+        Me.lblInfo.Name = "lblInfo"
+        Me.lblInfo.Size = New System.Drawing.Size(116, 13)
+        Me.lblInfo.TabIndex = 0
+        Me.lblInfo.Text = "SELECT A FUNCTION"
+        Me.lblInfo.Visible = False
         '
         'pnlModuleReg
         '
@@ -310,46 +291,13 @@ Partial Class MainForm
         Me.pnlModuleReg.TabIndex = 14
         Me.pnlModuleReg.Visible = False
         '
-        'lblModuleRegMain
+        'dateActivation
         '
-        Me.lblModuleRegMain.AutoSize = True
-        Me.lblModuleRegMain.Location = New System.Drawing.Point(4, 10)
-        Me.lblModuleRegMain.Name = "lblModuleRegMain"
-        Me.lblModuleRegMain.Size = New System.Drawing.Size(83, 13)
-        Me.lblModuleRegMain.TabIndex = 0
-        Me.lblModuleRegMain.Text = "Module Details :"
-        '
-        'lblModCode
-        '
-        Me.lblModCode.AutoSize = True
-        Me.lblModCode.Location = New System.Drawing.Point(7, 38)
-        Me.lblModCode.Name = "lblModCode"
-        Me.lblModCode.Size = New System.Drawing.Size(79, 13)
-        Me.lblModCode.TabIndex = 1
-        Me.lblModCode.Text = "Module Code : "
-        '
-        'txtModCode
-        '
-        Me.txtModCode.Location = New System.Drawing.Point(88, 35)
-        Me.txtModCode.Name = "txtModCode"
-        Me.txtModCode.Size = New System.Drawing.Size(100, 20)
-        Me.txtModCode.TabIndex = 2
-        '
-        'lblModTitle
-        '
-        Me.lblModTitle.AutoSize = True
-        Me.lblModTitle.Location = New System.Drawing.Point(7, 71)
-        Me.lblModTitle.Name = "lblModTitle"
-        Me.lblModTitle.Size = New System.Drawing.Size(74, 13)
-        Me.lblModTitle.TabIndex = 3
-        Me.lblModTitle.Text = "Module Title : "
-        '
-        'txtModTitle
-        '
-        Me.txtModTitle.Location = New System.Drawing.Point(88, 68)
-        Me.txtModTitle.Name = "txtModTitle"
-        Me.txtModTitle.Size = New System.Drawing.Size(100, 20)
-        Me.txtModTitle.TabIndex = 4
+        Me.dateActivation.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
+        Me.dateActivation.Location = New System.Drawing.Point(126, 112)
+        Me.dateActivation.Name = "dateActivation"
+        Me.dateActivation.Size = New System.Drawing.Size(200, 20)
+        Me.dateActivation.TabIndex = 6
         '
         'lblActivationSem
         '
@@ -360,13 +308,65 @@ Partial Class MainForm
         Me.lblActivationSem.TabIndex = 5
         Me.lblActivationSem.Text = "Activation Semester : "
         '
-        'dateActivation
+        'txtModTitle
         '
-        Me.dateActivation.Format = System.Windows.Forms.DateTimePickerFormat.[Short]
-        Me.dateActivation.Location = New System.Drawing.Point(126, 112)
-        Me.dateActivation.Name = "dateActivation"
-        Me.dateActivation.Size = New System.Drawing.Size(200, 20)
-        Me.dateActivation.TabIndex = 6
+        Me.txtModTitle.Location = New System.Drawing.Point(88, 68)
+        Me.txtModTitle.Name = "txtModTitle"
+        Me.txtModTitle.Size = New System.Drawing.Size(100, 20)
+        Me.txtModTitle.TabIndex = 4
+        '
+        'lblModTitle
+        '
+        Me.lblModTitle.AutoSize = True
+        Me.lblModTitle.Location = New System.Drawing.Point(7, 71)
+        Me.lblModTitle.Name = "lblModTitle"
+        Me.lblModTitle.Size = New System.Drawing.Size(74, 13)
+        Me.lblModTitle.TabIndex = 3
+        Me.lblModTitle.Text = "Module Title : "
+        '
+        'txtModCode
+        '
+        Me.txtModCode.Location = New System.Drawing.Point(88, 35)
+        Me.txtModCode.Name = "txtModCode"
+        Me.txtModCode.Size = New System.Drawing.Size(100, 20)
+        Me.txtModCode.TabIndex = 2
+        '
+        'lblModCode
+        '
+        Me.lblModCode.AutoSize = True
+        Me.lblModCode.Location = New System.Drawing.Point(7, 38)
+        Me.lblModCode.Name = "lblModCode"
+        Me.lblModCode.Size = New System.Drawing.Size(79, 13)
+        Me.lblModCode.TabIndex = 1
+        Me.lblModCode.Text = "Module Code : "
+        '
+        'lblModuleRegMain
+        '
+        Me.lblModuleRegMain.AutoSize = True
+        Me.lblModuleRegMain.Location = New System.Drawing.Point(4, 10)
+        Me.lblModuleRegMain.Name = "lblModuleRegMain"
+        Me.lblModuleRegMain.Size = New System.Drawing.Size(83, 13)
+        Me.lblModuleRegMain.TabIndex = 0
+        Me.lblModuleRegMain.Text = "Module Details :"
+        '
+        'btnSave
+        '
+        Me.btnSave.Location = New System.Drawing.Point(468, 307)
+        Me.btnSave.Name = "btnSave"
+        Me.btnSave.Size = New System.Drawing.Size(100, 37)
+        Me.btnSave.TabIndex = 6
+        Me.btnSave.Text = "Save"
+        Me.btnSave.UseVisualStyleBackColor = True
+        Me.btnSave.Visible = False
+        '
+        'btnClose
+        '
+        Me.btnClose.Location = New System.Drawing.Point(574, 307)
+        Me.btnClose.Name = "btnClose"
+        Me.btnClose.Size = New System.Drawing.Size(100, 37)
+        Me.btnClose.TabIndex = 7
+        Me.btnClose.Text = "Close"
+        Me.btnClose.UseVisualStyleBackColor = True
         '
         'MainForm
         '

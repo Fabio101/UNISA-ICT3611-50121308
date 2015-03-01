@@ -1,6 +1,10 @@
 ﻿Imports Student
+Imports System.IO
 
 Public Class MainForm
+
+    Dim stuReg As Integer
+    Dim modReg As Integer
 
     'Form validation functions
     'Checks if supplied tectbox contains characters
@@ -99,6 +103,7 @@ Public Class MainForm
     Private Sub btnStudentReg_Click(sender As Object, e As EventArgs) Handles btnStudentReg.Click
         lblInfo.Visible = False
         btnSave.Visible = True
+        stuReg = 1
         pnlModuleReg.Visible = False
         pnlStudentReg.Visible = True
     End Sub
@@ -122,6 +127,21 @@ Public Class MainForm
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
         If IsStudentRegValid() = True Then
+
+            If stuReg = 1 Then
+
+                Dim gender As String
+                If radioFemale.Checked = True Then
+                    gender = radioFemale.Text
+                Else
+                    gender = radioMale.Text
+                End If
+
+                Dim student As Student.Student
+                student = New Student.Student(txtTitle.Text, txtInit.Text, txtSurname.Text, txtAddress.Text, dateDob.Text, gender)
+                MessageBox.Show("Student Number : " & student.StudentNumber & vbCrLf & "Student : " & student.Title & " " & student.Surname & vbCrLf & "Address : " & student.Address & vbCrLf & "Gender : " & student.Gender & vbCrLf & "Date of Birth : " & student.DoB, "Success")
+            End If
+
             Application.Restart()
             Me.Refresh()
         End If

@@ -1,0 +1,8 @@
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\lib\Student\Student\bin\Release\Student.dll
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\lib\Student\Student\bin\Release\Student.pdb
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\lib\Student\Student\bin\Release\Student.xml
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\lib\Student\Student\obj\Release\Student.Resources.resources
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\lib\Student\Student\obj\Release\Student.vbproj.GenerateResource.Cache
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\lib\Student\Student\obj\Release\Student.dll
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\lib\Student\Student\obj\Release\Student.xml
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\lib\Student\Student\obj\Release\Student.pdb
