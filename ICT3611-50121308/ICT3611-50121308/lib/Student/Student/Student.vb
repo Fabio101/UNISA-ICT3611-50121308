@@ -131,7 +131,7 @@ Public Class Student
         End Set
     End Property
 
-    Public Sub validateStudentNumber(studentnumber As String)
+    Public Function validateStudentNumber(studentnumber As String) As Boolean
         'Validate Student number
         Dim Sum As Integer
         Dim digit As Integer
@@ -145,8 +145,10 @@ Public Class Student
         End While
 
         If Not Sum Mod 10 = 0 Then
-            MessageBox.Show(Me.StudentNumber & " is not a valid student number.", "Entry Error")
+            Return False
+        Else
+            Return True
         End If
-    End Sub
+    End Function
 
 End Class

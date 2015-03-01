@@ -1,4 +1,6 @@
-﻿Public Class MainForm
+﻿Imports Student
+
+Public Class MainForm
 
     'Form validation functions
     'Checks if supplied tectbox contains characters
