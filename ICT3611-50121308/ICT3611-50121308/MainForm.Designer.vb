@@ -58,11 +58,19 @@ Partial Class MainForm
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
         Me.lstModules = New System.Windows.Forms.ListBox()
+        Me.chkActivated = New System.Windows.Forms.CheckBox()
+        Me.chkModSem2 = New System.Windows.Forms.CheckBox()
+        Me.chkModSem1 = New System.Windows.Forms.CheckBox()
+        Me.lblSemester = New System.Windows.Forms.Label()
+        Me.pnlActivate = New System.Windows.Forms.Panel()
+        Me.dateActivate = New System.Windows.Forms.DateTimePicker()
+        Me.lblDate = New System.Windows.Forms.Label()
         Me.Functions.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.pnlModuleReg.SuspendLayout()
         Me.pnlModAct.SuspendLayout()
         Me.pnlStudentReg.SuspendLayout()
+        Me.pnlActivate.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnStudentReg
@@ -145,6 +153,7 @@ Partial Class MainForm
         '
         'pnlModAct
         '
+        Me.pnlModAct.Controls.Add(Me.pnlActivate)
         Me.pnlModAct.Controls.Add(Me.lstModules)
         Me.pnlModAct.Controls.Add(Me.lblModAct)
         Me.pnlModAct.Location = New System.Drawing.Point(6, 19)
@@ -414,6 +423,77 @@ Partial Class MainForm
         Me.lstModules.Size = New System.Drawing.Size(97, 212)
         Me.lstModules.TabIndex = 1
         '
+        'chkActivated
+        '
+        Me.chkActivated.AutoSize = True
+        Me.chkActivated.Location = New System.Drawing.Point(3, 5)
+        Me.chkActivated.Name = "chkActivated"
+        Me.chkActivated.Size = New System.Drawing.Size(71, 17)
+        Me.chkActivated.TabIndex = 2
+        Me.chkActivated.Text = "Activated"
+        Me.chkActivated.UseVisualStyleBackColor = True
+        '
+        'chkModSem2
+        '
+        Me.chkModSem2.AutoSize = True
+        Me.chkModSem2.Location = New System.Drawing.Point(66, 86)
+        Me.chkModSem2.Name = "chkModSem2"
+        Me.chkModSem2.Size = New System.Drawing.Size(91, 17)
+        Me.chkModSem2.TabIndex = 10
+        Me.chkModSem2.Text = "2nd Semester"
+        Me.chkModSem2.UseVisualStyleBackColor = True
+        '
+        'chkModSem1
+        '
+        Me.chkModSem1.AutoSize = True
+        Me.chkModSem1.Location = New System.Drawing.Point(66, 63)
+        Me.chkModSem1.Name = "chkModSem1"
+        Me.chkModSem1.Size = New System.Drawing.Size(87, 17)
+        Me.chkModSem1.TabIndex = 9
+        Me.chkModSem1.Text = "1st Semester"
+        Me.chkModSem1.UseVisualStyleBackColor = True
+        '
+        'lblSemester
+        '
+        Me.lblSemester.AutoSize = True
+        Me.lblSemester.Location = New System.Drawing.Point(0, 64)
+        Me.lblSemester.Name = "lblSemester"
+        Me.lblSemester.Size = New System.Drawing.Size(60, 13)
+        Me.lblSemester.TabIndex = 8
+        Me.lblSemester.Text = "Semester : "
+        '
+        'pnlActivate
+        '
+        Me.pnlActivate.Controls.Add(Me.lblDate)
+        Me.pnlActivate.Controls.Add(Me.dateActivate)
+        Me.pnlActivate.Controls.Add(Me.chkActivated)
+        Me.pnlActivate.Controls.Add(Me.chkModSem2)
+        Me.pnlActivate.Controls.Add(Me.chkModSem1)
+        Me.pnlActivate.Controls.Add(Me.lblSemester)
+        Me.pnlActivate.Location = New System.Drawing.Point(110, 35)
+        Me.pnlActivate.Name = "pnlActivate"
+        Me.pnlActivate.Size = New System.Drawing.Size(401, 213)
+        Me.pnlActivate.TabIndex = 11
+        Me.pnlActivate.Visible = False
+        '
+        'dateActivate
+        '
+        Me.dateActivate.CustomFormat = "mm/dd/yyyy"
+        Me.dateActivate.Format = System.Windows.Forms.DateTimePickerFormat.Custom
+        Me.dateActivate.Location = New System.Drawing.Point(93, 33)
+        Me.dateActivate.Name = "dateActivate"
+        Me.dateActivate.Size = New System.Drawing.Size(90, 20)
+        Me.dateActivate.TabIndex = 12
+        '
+        'lblDate
+        '
+        Me.lblDate.AutoSize = True
+        Me.lblDate.Location = New System.Drawing.Point(0, 36)
+        Me.lblDate.Name = "lblDate"
+        Me.lblDate.Size = New System.Drawing.Size(89, 13)
+        Me.lblDate.TabIndex = 13
+        Me.lblDate.Text = "Activation Date : "
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -436,6 +516,8 @@ Partial Class MainForm
         Me.pnlModAct.PerformLayout()
         Me.pnlStudentReg.ResumeLayout(False)
         Me.pnlStudentReg.PerformLayout()
+        Me.pnlActivate.ResumeLayout(False)
+        Me.pnlActivate.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -475,5 +557,12 @@ Partial Class MainForm
     Friend WithEvents pnlModAct As System.Windows.Forms.Panel
     Friend WithEvents lblModAct As System.Windows.Forms.Label
     Friend WithEvents lstModules As System.Windows.Forms.ListBox
+    Friend WithEvents chkActivated As System.Windows.Forms.CheckBox
+    Friend WithEvents chkModSem2 As System.Windows.Forms.CheckBox
+    Friend WithEvents chkModSem1 As System.Windows.Forms.CheckBox
+    Friend WithEvents lblSemester As System.Windows.Forms.Label
+    Friend WithEvents pnlActivate As System.Windows.Forms.Panel
+    Friend WithEvents dateActivate As System.Windows.Forms.DateTimePicker
+    Friend WithEvents lblDate As System.Windows.Forms.Label
 
 End Class

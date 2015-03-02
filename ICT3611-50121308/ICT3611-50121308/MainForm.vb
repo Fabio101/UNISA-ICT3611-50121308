@@ -124,7 +124,7 @@ Public Class MainForm
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lblInfo.Visible = True
 
-        'Populate Module listbox from file
+        'Populate Module Activation listbox from file
         Using MyReader As New Microsoft.VisualBasic.FileIO.TextFieldParser("modules.txt")
             MyReader.TextFieldType = FileIO.FieldType.Delimited
             MyReader.SetDelimiters("|")
@@ -177,6 +177,10 @@ Public Class MainForm
         pnlModAct.Visible = True
         pnlStudentReg.Visible = False
         pnlModuleReg.Visible = False
+    End Sub
+
+    Private Sub lstModules_SelectedValueChanged(sender As Object, e As EventArgs) Handles lstModules.SelectedValueChanged
+        pnlActivate.Visible = True
     End Sub
 
     Private Sub btnStudentEnroll_Click(sender As Object, e As EventArgs) Handles btnStudentEnroll.Click
