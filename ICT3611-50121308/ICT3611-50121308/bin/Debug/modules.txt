@@ -1,0 +1,2 @@
+ICT3611|Advanced Graphical User Interface Programming|Both Semesters
+ICT3612|Advanced Internet Programming|Both Semesters

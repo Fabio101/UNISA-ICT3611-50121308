@@ -190,9 +190,16 @@ Public Class MainForm
                     semester = "Second Semester"
                 End If
 
-                'restart application to restore all vars to state of startup, also clears the forms... handy
-                Application.Restart()
-                Me.Refresh()
+                Dim modl As Modules.modules
+                Try
+                    modl = New Modules.modules(txtModCode.Text, txtModTitle.Text, semester)
+                    MessageBox.Show("Module Code : " & modl.Code & vbCrLf & "Module Title : " & modl.Title & vbCrLf & "Semester Period : " & modl.Semester, "Success")
+                    'restart application to restore all vars to state of startup, also clears the forms... handy
+                    Application.Restart()
+                    Me.Refresh()
+                Catch ex As Exception
+                    MessageBox.Show(ex.Message, "Error")
+                End Try
             End If
         End If
     End Sub

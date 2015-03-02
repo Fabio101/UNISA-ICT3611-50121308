@@ -28,6 +28,15 @@ Partial Class MainForm
         Me.btnStudentEnroll = New System.Windows.Forms.Button()
         Me.Functions = New System.Windows.Forms.GroupBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
+        Me.pnlModuleReg = New System.Windows.Forms.Panel()
+        Me.chk2 = New System.Windows.Forms.CheckBox()
+        Me.chk1 = New System.Windows.Forms.CheckBox()
+        Me.lblActivationSem = New System.Windows.Forms.Label()
+        Me.txtModTitle = New System.Windows.Forms.TextBox()
+        Me.lblModTitle = New System.Windows.Forms.Label()
+        Me.txtModCode = New System.Windows.Forms.TextBox()
+        Me.lblModCode = New System.Windows.Forms.Label()
+        Me.lblModuleRegMain = New System.Windows.Forms.Label()
         Me.pnlStudentReg = New System.Windows.Forms.Panel()
         Me.radioFemale = New System.Windows.Forms.RadioButton()
         Me.radioMale = New System.Windows.Forms.RadioButton()
@@ -44,21 +53,12 @@ Partial Class MainForm
         Me.lblStudentTitle = New System.Windows.Forms.Label()
         Me.lblStudentRegMain = New System.Windows.Forms.Label()
         Me.lblInfo = New System.Windows.Forms.Label()
-        Me.pnlModuleReg = New System.Windows.Forms.Panel()
-        Me.lblActivationSem = New System.Windows.Forms.Label()
-        Me.txtModTitle = New System.Windows.Forms.TextBox()
-        Me.lblModTitle = New System.Windows.Forms.Label()
-        Me.txtModCode = New System.Windows.Forms.TextBox()
-        Me.lblModCode = New System.Windows.Forms.Label()
-        Me.lblModuleRegMain = New System.Windows.Forms.Label()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
-        Me.chk1 = New System.Windows.Forms.CheckBox()
-        Me.chk2 = New System.Windows.Forms.CheckBox()
         Me.Functions.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
-        Me.pnlStudentReg.SuspendLayout()
         Me.pnlModuleReg.SuspendLayout()
+        Me.pnlStudentReg.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnStudentReg
@@ -121,6 +121,93 @@ Partial Class MainForm
         Me.GroupBox1.TabIndex = 5
         Me.GroupBox1.TabStop = False
         Me.GroupBox1.Text = "Details"
+        '
+        'pnlModuleReg
+        '
+        Me.pnlModuleReg.Controls.Add(Me.chk2)
+        Me.pnlModuleReg.Controls.Add(Me.chk1)
+        Me.pnlModuleReg.Controls.Add(Me.lblActivationSem)
+        Me.pnlModuleReg.Controls.Add(Me.txtModTitle)
+        Me.pnlModuleReg.Controls.Add(Me.lblModTitle)
+        Me.pnlModuleReg.Controls.Add(Me.txtModCode)
+        Me.pnlModuleReg.Controls.Add(Me.lblModCode)
+        Me.pnlModuleReg.Controls.Add(Me.lblModuleRegMain)
+        Me.pnlModuleReg.Location = New System.Drawing.Point(6, 19)
+        Me.pnlModuleReg.Name = "pnlModuleReg"
+        Me.pnlModuleReg.Size = New System.Drawing.Size(514, 264)
+        Me.pnlModuleReg.TabIndex = 14
+        Me.pnlModuleReg.Visible = False
+        '
+        'chk2
+        '
+        Me.chk2.AutoSize = True
+        Me.chk2.Location = New System.Drawing.Point(127, 138)
+        Me.chk2.Name = "chk2"
+        Me.chk2.Size = New System.Drawing.Size(91, 17)
+        Me.chk2.TabIndex = 7
+        Me.chk2.Text = "2nd Semester"
+        Me.chk2.UseVisualStyleBackColor = True
+        '
+        'chk1
+        '
+        Me.chk1.AutoSize = True
+        Me.chk1.Location = New System.Drawing.Point(127, 112)
+        Me.chk1.Name = "chk1"
+        Me.chk1.Size = New System.Drawing.Size(87, 17)
+        Me.chk1.TabIndex = 6
+        Me.chk1.Text = "1st Semester"
+        Me.chk1.UseVisualStyleBackColor = True
+        '
+        'lblActivationSem
+        '
+        Me.lblActivationSem.AutoSize = True
+        Me.lblActivationSem.Location = New System.Drawing.Point(10, 112)
+        Me.lblActivationSem.Name = "lblActivationSem"
+        Me.lblActivationSem.Size = New System.Drawing.Size(110, 13)
+        Me.lblActivationSem.TabIndex = 5
+        Me.lblActivationSem.Text = "Activation Semester : "
+        '
+        'txtModTitle
+        '
+        Me.txtModTitle.Location = New System.Drawing.Point(88, 68)
+        Me.txtModTitle.Name = "txtModTitle"
+        Me.txtModTitle.Size = New System.Drawing.Size(100, 20)
+        Me.txtModTitle.TabIndex = 4
+        '
+        'lblModTitle
+        '
+        Me.lblModTitle.AutoSize = True
+        Me.lblModTitle.Location = New System.Drawing.Point(7, 71)
+        Me.lblModTitle.Name = "lblModTitle"
+        Me.lblModTitle.Size = New System.Drawing.Size(74, 13)
+        Me.lblModTitle.TabIndex = 3
+        Me.lblModTitle.Text = "Module Title : "
+        '
+        'txtModCode
+        '
+        Me.txtModCode.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper
+        Me.txtModCode.Location = New System.Drawing.Point(88, 35)
+        Me.txtModCode.Name = "txtModCode"
+        Me.txtModCode.Size = New System.Drawing.Size(100, 20)
+        Me.txtModCode.TabIndex = 2
+        '
+        'lblModCode
+        '
+        Me.lblModCode.AutoSize = True
+        Me.lblModCode.Location = New System.Drawing.Point(7, 38)
+        Me.lblModCode.Name = "lblModCode"
+        Me.lblModCode.Size = New System.Drawing.Size(79, 13)
+        Me.lblModCode.TabIndex = 1
+        Me.lblModCode.Text = "Module Code : "
+        '
+        'lblModuleRegMain
+        '
+        Me.lblModuleRegMain.AutoSize = True
+        Me.lblModuleRegMain.Location = New System.Drawing.Point(4, 10)
+        Me.lblModuleRegMain.Name = "lblModuleRegMain"
+        Me.lblModuleRegMain.Size = New System.Drawing.Size(83, 13)
+        Me.lblModuleRegMain.TabIndex = 0
+        Me.lblModuleRegMain.Text = "Module Details :"
         '
         'pnlStudentReg
         '
@@ -276,72 +363,6 @@ Partial Class MainForm
         Me.lblInfo.Text = "SELECT A FUNCTION"
         Me.lblInfo.Visible = False
         '
-        'pnlModuleReg
-        '
-        Me.pnlModuleReg.Controls.Add(Me.chk2)
-        Me.pnlModuleReg.Controls.Add(Me.chk1)
-        Me.pnlModuleReg.Controls.Add(Me.lblActivationSem)
-        Me.pnlModuleReg.Controls.Add(Me.txtModTitle)
-        Me.pnlModuleReg.Controls.Add(Me.lblModTitle)
-        Me.pnlModuleReg.Controls.Add(Me.txtModCode)
-        Me.pnlModuleReg.Controls.Add(Me.lblModCode)
-        Me.pnlModuleReg.Controls.Add(Me.lblModuleRegMain)
-        Me.pnlModuleReg.Location = New System.Drawing.Point(6, 19)
-        Me.pnlModuleReg.Name = "pnlModuleReg"
-        Me.pnlModuleReg.Size = New System.Drawing.Size(514, 264)
-        Me.pnlModuleReg.TabIndex = 14
-        Me.pnlModuleReg.Visible = False
-        '
-        'lblActivationSem
-        '
-        Me.lblActivationSem.AutoSize = True
-        Me.lblActivationSem.Location = New System.Drawing.Point(10, 112)
-        Me.lblActivationSem.Name = "lblActivationSem"
-        Me.lblActivationSem.Size = New System.Drawing.Size(110, 13)
-        Me.lblActivationSem.TabIndex = 5
-        Me.lblActivationSem.Text = "Activation Semester : "
-        '
-        'txtModTitle
-        '
-        Me.txtModTitle.Location = New System.Drawing.Point(88, 68)
-        Me.txtModTitle.Name = "txtModTitle"
-        Me.txtModTitle.Size = New System.Drawing.Size(100, 20)
-        Me.txtModTitle.TabIndex = 4
-        '
-        'lblModTitle
-        '
-        Me.lblModTitle.AutoSize = True
-        Me.lblModTitle.Location = New System.Drawing.Point(7, 71)
-        Me.lblModTitle.Name = "lblModTitle"
-        Me.lblModTitle.Size = New System.Drawing.Size(74, 13)
-        Me.lblModTitle.TabIndex = 3
-        Me.lblModTitle.Text = "Module Title : "
-        '
-        'txtModCode
-        '
-        Me.txtModCode.Location = New System.Drawing.Point(88, 35)
-        Me.txtModCode.Name = "txtModCode"
-        Me.txtModCode.Size = New System.Drawing.Size(100, 20)
-        Me.txtModCode.TabIndex = 2
-        '
-        'lblModCode
-        '
-        Me.lblModCode.AutoSize = True
-        Me.lblModCode.Location = New System.Drawing.Point(7, 38)
-        Me.lblModCode.Name = "lblModCode"
-        Me.lblModCode.Size = New System.Drawing.Size(79, 13)
-        Me.lblModCode.TabIndex = 1
-        Me.lblModCode.Text = "Module Code : "
-        '
-        'lblModuleRegMain
-        '
-        Me.lblModuleRegMain.AutoSize = True
-        Me.lblModuleRegMain.Location = New System.Drawing.Point(4, 10)
-        Me.lblModuleRegMain.Name = "lblModuleRegMain"
-        Me.lblModuleRegMain.Size = New System.Drawing.Size(83, 13)
-        Me.lblModuleRegMain.TabIndex = 0
-        Me.lblModuleRegMain.Text = "Module Details :"
-        '
         'btnSave
         '
         Me.btnSave.Location = New System.Drawing.Point(468, 307)
@@ -361,26 +382,6 @@ Partial Class MainForm
         Me.btnClose.Text = "Close"
         Me.btnClose.UseVisualStyleBackColor = True
         '
-        'chk1
-        '
-        Me.chk1.AutoSize = True
-        Me.chk1.Location = New System.Drawing.Point(127, 112)
-        Me.chk1.Name = "chk1"
-        Me.chk1.Size = New System.Drawing.Size(87, 17)
-        Me.chk1.TabIndex = 6
-        Me.chk1.Text = "1st Semester"
-        Me.chk1.UseVisualStyleBackColor = True
-        '
-        'chk2
-        '
-        Me.chk2.AutoSize = True
-        Me.chk2.Location = New System.Drawing.Point(127, 138)
-        Me.chk2.Name = "chk2"
-        Me.chk2.Size = New System.Drawing.Size(91, 17)
-        Me.chk2.TabIndex = 7
-        Me.chk2.Text = "2nd Semester"
-        Me.chk2.UseVisualStyleBackColor = True
-        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -397,10 +398,10 @@ Partial Class MainForm
         Me.Functions.ResumeLayout(False)
         Me.GroupBox1.ResumeLayout(False)
         Me.GroupBox1.PerformLayout()
-        Me.pnlStudentReg.ResumeLayout(False)
-        Me.pnlStudentReg.PerformLayout()
         Me.pnlModuleReg.ResumeLayout(False)
         Me.pnlModuleReg.PerformLayout()
+        Me.pnlStudentReg.ResumeLayout(False)
+        Me.pnlStudentReg.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub

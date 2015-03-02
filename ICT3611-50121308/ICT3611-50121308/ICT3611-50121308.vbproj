@@ -46,6 +46,9 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Modules">
+      <HintPath>lib\Modules\Modules\bin\Release\Modules.dll</HintPath>
+    </Reference>
     <Reference Include="Student">
       <HintPath>lib\Student\Student\bin\Release\Student.dll</HintPath>
     </Reference>

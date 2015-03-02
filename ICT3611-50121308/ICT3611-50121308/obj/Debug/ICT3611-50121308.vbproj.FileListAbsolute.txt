@@ -12,3 +12,6 @@ C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\bin\Debug\St
 C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\bin\Debug\Student.pdb
 C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\bin\Debug\Student.xml
 C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\obj\Debug\ICT3611-50121308.vbprojResolveAssemblyReference.cache
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\bin\Debug\Modules.dll
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\bin\Debug\Modules.pdb
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\bin\Debug\Modules.xml
