@@ -29,6 +29,8 @@ Partial Class MainForm
         Me.Functions = New System.Windows.Forms.GroupBox()
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.pnlModuleReg = New System.Windows.Forms.Panel()
+        Me.pnlModAct = New System.Windows.Forms.Panel()
+        Me.lblModAct = New System.Windows.Forms.Label()
         Me.chk2 = New System.Windows.Forms.CheckBox()
         Me.chk1 = New System.Windows.Forms.CheckBox()
         Me.lblActivationSem = New System.Windows.Forms.Label()
@@ -55,9 +57,11 @@ Partial Class MainForm
         Me.lblInfo = New System.Windows.Forms.Label()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
+        Me.lstModules = New System.Windows.Forms.ListBox()
         Me.Functions.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.pnlModuleReg.SuspendLayout()
+        Me.pnlModAct.SuspendLayout()
         Me.pnlStudentReg.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -112,6 +116,7 @@ Partial Class MainForm
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.pnlModAct)
         Me.GroupBox1.Controls.Add(Me.pnlModuleReg)
         Me.GroupBox1.Controls.Add(Me.pnlStudentReg)
         Me.GroupBox1.Controls.Add(Me.lblInfo)
@@ -137,6 +142,25 @@ Partial Class MainForm
         Me.pnlModuleReg.Size = New System.Drawing.Size(514, 264)
         Me.pnlModuleReg.TabIndex = 14
         Me.pnlModuleReg.Visible = False
+        '
+        'pnlModAct
+        '
+        Me.pnlModAct.Controls.Add(Me.lstModules)
+        Me.pnlModAct.Controls.Add(Me.lblModAct)
+        Me.pnlModAct.Location = New System.Drawing.Point(6, 19)
+        Me.pnlModAct.Name = "pnlModAct"
+        Me.pnlModAct.Size = New System.Drawing.Size(514, 264)
+        Me.pnlModAct.TabIndex = 15
+        Me.pnlModAct.Visible = False
+        '
+        'lblModAct
+        '
+        Me.lblModAct.AutoSize = True
+        Me.lblModAct.Location = New System.Drawing.Point(4, 10)
+        Me.lblModAct.Name = "lblModAct"
+        Me.lblModAct.Size = New System.Drawing.Size(103, 13)
+        Me.lblModAct.TabIndex = 0
+        Me.lblModAct.Text = "Module Activations :"
         '
         'chk2
         '
@@ -382,6 +406,14 @@ Partial Class MainForm
         Me.btnClose.Text = "Close"
         Me.btnClose.UseVisualStyleBackColor = True
         '
+        'lstModules
+        '
+        Me.lstModules.FormattingEnabled = True
+        Me.lstModules.Location = New System.Drawing.Point(7, 35)
+        Me.lstModules.Name = "lstModules"
+        Me.lstModules.Size = New System.Drawing.Size(97, 212)
+        Me.lstModules.TabIndex = 1
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -400,6 +432,8 @@ Partial Class MainForm
         Me.GroupBox1.PerformLayout()
         Me.pnlModuleReg.ResumeLayout(False)
         Me.pnlModuleReg.PerformLayout()
+        Me.pnlModAct.ResumeLayout(False)
+        Me.pnlModAct.PerformLayout()
         Me.pnlStudentReg.ResumeLayout(False)
         Me.pnlStudentReg.PerformLayout()
         Me.ResumeLayout(False)
@@ -438,5 +472,8 @@ Partial Class MainForm
     Friend WithEvents lblActivationSem As System.Windows.Forms.Label
     Friend WithEvents chk1 As System.Windows.Forms.CheckBox
     Friend WithEvents chk2 As System.Windows.Forms.CheckBox
+    Friend WithEvents pnlModAct As System.Windows.Forms.Panel
+    Friend WithEvents lblModAct As System.Windows.Forms.Label
+    Friend WithEvents lstModules As System.Windows.Forms.ListBox
 
 End Class

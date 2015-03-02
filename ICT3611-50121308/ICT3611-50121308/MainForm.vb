@@ -6,6 +6,7 @@ Public Class MainForm
 
     Dim stuReg As Integer
     Dim modReg As Integer
+    Dim modAct As Integer
 
     'Form validation functions
     'Checks if supplied tectbox contains characters
@@ -122,6 +123,23 @@ Public Class MainForm
     'Form Object event handeling
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lblInfo.Visible = True
+
+        'Populate Module listbox from file
+        Using MyReader As New Microsoft.VisualBasic.FileIO.TextFieldParser("modules.txt")
+            MyReader.TextFieldType = FileIO.FieldType.Delimited
+            MyReader.SetDelimiters("|")
+
+            Dim currentRow As String()
+            While Not MyReader.EndOfData
+                Try
+                    currentRow = MyReader.ReadFields()
+                    lstModules.Items.Add(currentRow(0))
+                Catch ex As Exception
+                    MsgBox("Line " & ex.Message & "is not valid line")
+                End Try
+            End While
+        End Using
+
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
@@ -133,8 +151,10 @@ Public Class MainForm
         btnSave.Visible = True
         stuReg = 1
         modReg = 0
-        pnlModuleReg.Visible = False
+        modAct = 0
         pnlStudentReg.Visible = True
+        pnlModuleReg.Visible = False
+        pnlModAct.Visible = False
     End Sub
 
     Private Sub btnModuleReg_Click(sender As Object, e As EventArgs) Handles btnModuleReg.Click
@@ -142,13 +162,21 @@ Public Class MainForm
         btnSave.Visible = True
         stuReg = 0
         modReg = 1
+        modAct = 0
         pnlStudentReg.Visible = False
         pnlModuleReg.Visible = True
+        pnlModAct.Visible = False
     End Sub
 
     Private Sub btnModuleAct_Click(sender As Object, e As EventArgs) Handles btnModuleAct.Click
         lblInfo.Visible = False
         btnSave.Visible = True
+        stuReg = 0
+        modReg = 0
+        modAct = 1
+        pnlModAct.Visible = True
+        pnlStudentReg.Visible = False
+        pnlModuleReg.Visible = False
     End Sub
 
     Private Sub btnStudentEnroll_Click(sender As Object, e As EventArgs) Handles btnStudentEnroll.Click
@@ -178,7 +206,7 @@ Public Class MainForm
                 Me.Refresh()
             End If
         ElseIf modReg = 1 Then
-
+            'Module registration specific commits
             If IsModuleRegValid() = True Then
 
                 Dim semester As String
@@ -203,5 +231,4 @@ Public Class MainForm
             End If
         End If
     End Sub
-
 End Class

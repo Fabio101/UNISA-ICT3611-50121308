@@ -12,3 +12,6 @@ C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\obj\Release\
 C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\obj\Release\ICT3611-50121308.exe
 C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\obj\Release\ICT3611-50121308.xml
 C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\obj\Release\ICT3611-50121308.pdb
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\bin\Release\Modules.dll
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\bin\Release\Modules.pdb
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\bin\Release\Modules.xml
