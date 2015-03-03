@@ -8,6 +8,7 @@ Public Class MainForm
     Dim stuReg As Integer
     Dim modReg As Integer
     Dim modAct As Integer
+    Dim stuEnr As Integer
 
     'Form validation functions
     'Checks if supplied tectbox contains characters
@@ -125,7 +126,7 @@ Public Class MainForm
     Private Sub MainForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lblInfo.Visible = True
 
-        'Populate Module Activation listbox from file
+        'Populate Module Activation listbox from file + Populate enrollment listbox with only active modules
         Using MyReader As New TextFieldParser("modules.txt")
             MyReader.TextFieldType = FileIO.FieldType.Delimited
             MyReader.SetDelimiters("|")
@@ -135,6 +136,11 @@ Public Class MainForm
                 Try
                     currentRow = MyReader.ReadFields()
                     lstModules.Items.Add(currentRow(0))
+
+                    If currentRow(3) = "True" Then
+                        lstActMod.Items.Add(currentRow(0))
+                    End If
+
                 Catch ex As Exception
                     MsgBox("Line " & ex.Message & "is not valid line")
                 End Try
@@ -153,9 +159,12 @@ Public Class MainForm
         stuReg = 1
         modReg = 0
         modAct = 0
+        stuEnr = 0
         pnlStudentReg.Visible = True
         pnlModuleReg.Visible = False
         pnlModAct.Visible = False
+        pnlEnrol.Visible = False
+        btnSave.Text = "Register Student"
     End Sub
 
     Private Sub btnModuleReg_Click(sender As Object, e As EventArgs) Handles btnModuleReg.Click
@@ -164,9 +173,12 @@ Public Class MainForm
         stuReg = 0
         modReg = 1
         modAct = 0
+        stuEnr = 0
         pnlStudentReg.Visible = False
         pnlModuleReg.Visible = True
         pnlModAct.Visible = False
+        pnlEnrol.Visible = False
+        btnSave.Text = "Register Module"
     End Sub
 
     Private Sub btnModuleAct_Click(sender As Object, e As EventArgs) Handles btnModuleAct.Click
@@ -175,13 +187,43 @@ Public Class MainForm
         stuReg = 0
         modReg = 0
         modAct = 1
+        stuEnr = 0
         pnlModAct.Visible = True
         pnlStudentReg.Visible = False
         pnlModuleReg.Visible = False
+        pnlEnrol.Visible = False
+        btnSave.Text = "Activate/Modify"
+    End Sub
+
+    Private Sub btnStudentEnroll_Click(sender As Object, e As EventArgs) Handles btnStudentEnroll.Click
+        lblInfo.Visible = False
+        btnSave.Visible = True
+        stuEnr = 1
+        stuReg = 0
+        modReg = 0
+        modAct = 0
+        pnlModAct.Visible = False
+        pnlStudentReg.Visible = False
+        pnlModuleReg.Visible = False
+        pnlEnrol.Visible = True
+        btnSave.Text = "Enroll Student"
+    End Sub
+
+    Private Sub lstActMod_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstActMod.SelectedIndexChanged
+        lstEnrolled.Items.Clear()
+        'Populate Enrolled Students listbox from students file
+        Using MyReader3 As New StreamReader("students.txt")
+
+            Do While MyReader3.Peek() <> -1
+                Dim line() As String = MyReader3.ReadLine.Split("|")
+                If line.Contains(lstActMod.SelectedItem.ToString()) Then
+                    lstEnrolled.Items.Add(line(0) & " " & line(1) & " " & line(2))
+                End If
+            Loop
+        End Using
     End Sub
 
     Private Sub lstModules_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstModules.SelectedIndexChanged
-        pnlActivate.Visible = True
 
         'Check if the module is activated and prepopulate form objects accordingly
         Using MyReader2 As New StreamReader("modules.txt")
@@ -220,11 +262,6 @@ Public Class MainForm
             Loop
         End Using
 
-    End Sub
-
-    Private Sub btnStudentEnroll_Click(sender As Object, e As EventArgs) Handles btnStudentEnroll.Click
-        lblInfo.Visible = False
-        btnSave.Visible = True
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
@@ -300,8 +337,10 @@ Public Class MainForm
                 Application.Restart()
                 Me.Refresh()
             Catch ex As Exception
-                MessageBox.Show(ex.Message, "Error")
+                MessageBox.Show("You must select a module from the list.", "Entry Error")
             End Try
+        ElseIf stuEnr = 1 Then
+
         End If
     End Sub
 End Class

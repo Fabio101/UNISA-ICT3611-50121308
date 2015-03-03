@@ -68,12 +68,23 @@ Partial Class MainForm
         Me.lblInfo = New System.Windows.Forms.Label()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
+        Me.pnlEnrol = New System.Windows.Forms.Panel()
+        Me.pnlStuEnrol = New System.Windows.Forms.Panel()
+        Me.Label3 = New System.Windows.Forms.Label()
+        Me.lstActMod = New System.Windows.Forms.ListBox()
+        Me.lblAct = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.txtStuNum = New System.Windows.Forms.TextBox()
+        Me.lstEnrolled = New System.Windows.Forms.ListBox()
+        Me.lblenrolled = New System.Windows.Forms.Label()
         Me.Functions.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.pnlModAct.SuspendLayout()
         Me.pnlActivate.SuspendLayout()
         Me.pnlModuleReg.SuspendLayout()
         Me.pnlStudentReg.SuspendLayout()
+        Me.pnlEnrol.SuspendLayout()
+        Me.pnlStuEnrol.SuspendLayout()
         Me.SuspendLayout()
         '
         'btnStudentReg
@@ -127,6 +138,7 @@ Partial Class MainForm
         '
         'GroupBox1
         '
+        Me.GroupBox1.Controls.Add(Me.pnlEnrol)
         Me.GroupBox1.Controls.Add(Me.pnlModAct)
         Me.GroupBox1.Controls.Add(Me.pnlModuleReg)
         Me.GroupBox1.Controls.Add(Me.pnlStudentReg)
@@ -164,7 +176,6 @@ Partial Class MainForm
         Me.pnlActivate.Name = "pnlActivate"
         Me.pnlActivate.Size = New System.Drawing.Size(401, 213)
         Me.pnlActivate.TabIndex = 11
-        Me.pnlActivate.Visible = False
         '
         'lblTitle
         '
@@ -525,6 +536,87 @@ Partial Class MainForm
         Me.btnClose.Text = "Close"
         Me.btnClose.UseVisualStyleBackColor = True
         '
+        'pnlEnrol
+        '
+        Me.pnlEnrol.Controls.Add(Me.pnlStuEnrol)
+        Me.pnlEnrol.Controls.Add(Me.lstActMod)
+        Me.pnlEnrol.Controls.Add(Me.lblAct)
+        Me.pnlEnrol.Location = New System.Drawing.Point(6, 16)
+        Me.pnlEnrol.Name = "pnlEnrol"
+        Me.pnlEnrol.Size = New System.Drawing.Size(514, 264)
+        Me.pnlEnrol.TabIndex = 16
+        Me.pnlEnrol.Visible = False
+        '
+        'pnlStuEnrol
+        '
+        Me.pnlStuEnrol.Controls.Add(Me.lblenrolled)
+        Me.pnlStuEnrol.Controls.Add(Me.lstEnrolled)
+        Me.pnlStuEnrol.Controls.Add(Me.txtStuNum)
+        Me.pnlStuEnrol.Controls.Add(Me.Label1)
+        Me.pnlStuEnrol.Controls.Add(Me.Label3)
+        Me.pnlStuEnrol.Location = New System.Drawing.Point(113, 38)
+        Me.pnlStuEnrol.Name = "pnlStuEnrol"
+        Me.pnlStuEnrol.Size = New System.Drawing.Size(398, 213)
+        Me.pnlStuEnrol.TabIndex = 14
+        '
+        'Label3
+        '
+        Me.Label3.AutoSize = True
+        Me.Label3.Location = New System.Drawing.Point(293, 3)
+        Me.Label3.Name = "Label3"
+        Me.Label3.Size = New System.Drawing.Size(0, 13)
+        Me.Label3.TabIndex = 14
+        '
+        'lstActMod
+        '
+        Me.lstActMod.FormattingEnabled = True
+        Me.lstActMod.Location = New System.Drawing.Point(7, 38)
+        Me.lstActMod.Name = "lstActMod"
+        Me.lstActMod.Size = New System.Drawing.Size(97, 212)
+        Me.lstActMod.TabIndex = 13
+        '
+        'lblAct
+        '
+        Me.lblAct.AutoSize = True
+        Me.lblAct.Location = New System.Drawing.Point(4, 13)
+        Me.lblAct.Name = "lblAct"
+        Me.lblAct.Size = New System.Drawing.Size(86, 13)
+        Me.lblAct.TabIndex = 12
+        Me.lblAct.Text = "Active Modules :"
+        '
+        'Label1
+        '
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(11, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(122, 13)
+        Me.Label1.TabIndex = 15
+        Me.Label1.Text = "Enroll Student Number : "
+        '
+        'txtStuNum
+        '
+        Me.txtStuNum.Location = New System.Drawing.Point(139, 0)
+        Me.txtStuNum.Name = "txtStuNum"
+        Me.txtStuNum.Size = New System.Drawing.Size(145, 20)
+        Me.txtStuNum.TabIndex = 16
+        '
+        'lstEnrolled
+        '
+        Me.lstEnrolled.FormattingEnabled = True
+        Me.lstEnrolled.Location = New System.Drawing.Point(14, 52)
+        Me.lstEnrolled.Name = "lstEnrolled"
+        Me.lstEnrolled.Size = New System.Drawing.Size(361, 160)
+        Me.lstEnrolled.TabIndex = 17
+        '
+        'lblenrolled
+        '
+        Me.lblenrolled.AutoSize = True
+        Me.lblenrolled.Location = New System.Drawing.Point(14, 27)
+        Me.lblenrolled.Name = "lblenrolled"
+        Me.lblenrolled.Size = New System.Drawing.Size(96, 13)
+        Me.lblenrolled.TabIndex = 18
+        Me.lblenrolled.Text = "Enrolled Students :"
+        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -549,6 +641,10 @@ Partial Class MainForm
         Me.pnlModuleReg.PerformLayout()
         Me.pnlStudentReg.ResumeLayout(False)
         Me.pnlStudentReg.PerformLayout()
+        Me.pnlEnrol.ResumeLayout(False)
+        Me.pnlEnrol.PerformLayout()
+        Me.pnlStuEnrol.ResumeLayout(False)
+        Me.pnlStuEnrol.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -598,5 +694,14 @@ Partial Class MainForm
     Friend WithEvents lblSelected As System.Windows.Forms.Label
     Friend WithEvents lblActYear As System.Windows.Forms.Label
     Friend WithEvents lblTitle As System.Windows.Forms.Label
+    Friend WithEvents pnlEnrol As System.Windows.Forms.Panel
+    Friend WithEvents pnlStuEnrol As System.Windows.Forms.Panel
+    Friend WithEvents Label3 As System.Windows.Forms.Label
+    Friend WithEvents lstActMod As System.Windows.Forms.ListBox
+    Friend WithEvents lblAct As System.Windows.Forms.Label
+    Friend WithEvents txtStuNum As System.Windows.Forms.TextBox
+    Friend WithEvents Label1 As System.Windows.Forms.Label
+    Friend WithEvents lblenrolled As System.Windows.Forms.Label
+    Friend WithEvents lstEnrolled As System.Windows.Forms.ListBox
 
 End Class
