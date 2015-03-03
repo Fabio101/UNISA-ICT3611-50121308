@@ -30,6 +30,7 @@ Partial Class MainForm
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.pnlModAct = New System.Windows.Forms.Panel()
         Me.pnlActivate = New System.Windows.Forms.Panel()
+        Me.lblTitle = New System.Windows.Forms.Label()
         Me.lblActYear = New System.Windows.Forms.Label()
         Me.lblSelected = New System.Windows.Forms.Label()
         Me.lblDate = New System.Windows.Forms.Label()
@@ -67,8 +68,6 @@ Partial Class MainForm
         Me.lblInfo = New System.Windows.Forms.Label()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
-        Me.Label1 = New System.Windows.Forms.Label()
-        Me.lblTitle = New System.Windows.Forms.Label()
         Me.Functions.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.pnlModAct.SuspendLayout()
@@ -167,6 +166,14 @@ Partial Class MainForm
         Me.pnlActivate.TabIndex = 11
         Me.pnlActivate.Visible = False
         '
+        'lblTitle
+        '
+        Me.lblTitle.AutoSize = True
+        Me.lblTitle.Location = New System.Drawing.Point(4, 114)
+        Me.lblTitle.Name = "lblTitle"
+        Me.lblTitle.Size = New System.Drawing.Size(0, 13)
+        Me.lblTitle.TabIndex = 16
+        '
         'lblActYear
         '
         Me.lblActYear.AutoSize = True
@@ -254,9 +261,9 @@ Partial Class MainForm
         Me.lblModAct.AutoSize = True
         Me.lblModAct.Location = New System.Drawing.Point(4, 10)
         Me.lblModAct.Name = "lblModAct"
-        Me.lblModAct.Size = New System.Drawing.Size(103, 13)
+        Me.lblModAct.Size = New System.Drawing.Size(67, 13)
         Me.lblModAct.TabIndex = 0
-        Me.lblModAct.Text = "Module Activations :"
+        Me.lblModAct.Text = "All Modules :"
         '
         'pnlModuleReg
         '
@@ -518,29 +525,11 @@ Partial Class MainForm
         Me.btnClose.Text = "Close"
         Me.btnClose.UseVisualStyleBackColor = True
         '
-        'Label1
-        '
-        Me.Label1.AutoSize = True
-        Me.Label1.Location = New System.Drawing.Point(0, 0)
-        Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(39, 13)
-        Me.Label1.TabIndex = 8
-        Me.Label1.Text = "Label1"
-        '
-        'lblTitle
-        '
-        Me.lblTitle.AutoSize = True
-        Me.lblTitle.Location = New System.Drawing.Point(4, 114)
-        Me.lblTitle.Name = "lblTitle"
-        Me.lblTitle.Size = New System.Drawing.Size(0, 13)
-        Me.lblTitle.TabIndex = 16
-        '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(686, 356)
-        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.GroupBox1)
@@ -561,7 +550,6 @@ Partial Class MainForm
         Me.pnlStudentReg.ResumeLayout(False)
         Me.pnlStudentReg.PerformLayout()
         Me.ResumeLayout(False)
-        Me.PerformLayout()
 
     End Sub
     Friend WithEvents btnStudentReg As System.Windows.Forms.Button
@@ -610,6 +598,5 @@ Partial Class MainForm
     Friend WithEvents lblSelected As System.Windows.Forms.Label
     Friend WithEvents lblActYear As System.Windows.Forms.Label
     Friend WithEvents lblTitle As System.Windows.Forms.Label
-    Friend WithEvents Label1 As System.Windows.Forms.Label
 
 End Class
