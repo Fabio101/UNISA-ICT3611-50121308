@@ -1,4 +1,5 @@
 ﻿Imports System
+Imports System.Text
 Imports System.IO
 
 Public Class modules
@@ -7,7 +8,11 @@ Public Class modules
     Private Property m_Title As String
     Private Property m_Semester As String
     Private Property m_Active As Boolean
-    Private Property m_Year As Boolean
+    Private Property m_Year As String
+
+    Public Sub New()
+
+    End Sub
 
     Public Sub New(code As String, title As String, semester As String)
 
@@ -27,6 +32,43 @@ Public Class modules
         End If
 
         'Write student object data to modules file
+        Dim textOut As New StreamWriter(New FileStream(path, FileMode.Append, FileAccess.Write))
+
+        textOut.Write(Me.Code & "|")
+        textOut.Write(Me.Title & "|")
+        textOut.Write(Me.Semester & "|")
+        textOut.Write(Me.Active & "|")
+        textOut.Write(Me.Year & vbCrLf)
+
+        textOut.Close()
+
+    End Sub
+
+    Public Sub modifyModule(code As String, title As String, semester As String, active As Boolean, year As String)
+
+        Me.Code = code
+        Me.Title = title
+        Me.Semester = semester
+        Me.Active = active
+        Me.Year = year
+
+        'Search all lines of module file for code value then rewrite the file without the found line, essentially deleting the line
+        Dim lines() As String
+        Dim outputlines As New List(Of String)
+        Dim searchString As String = code
+
+        Dim path As String = "modules.txt"
+        lines = IO.File.ReadAllLines(path)
+
+        For Each line As String In lines
+            If line.Contains(searchString) = False Then
+                outputlines.Add(line)
+            End If
+        Next
+        'Restore file data minus modified line
+        File.WriteAllLines(path, outputlines.ToArray(), Encoding.UTF8)
+
+        'Write modified student object data to modules file
         Dim textOut As New StreamWriter(New FileStream(path, FileMode.Append, FileAccess.Write))
 
         textOut.Write(Me.Code & "|")
@@ -76,11 +118,11 @@ Public Class modules
         End Set
     End Property
 
-    Public Property Year As Boolean
+    Public Property Year As String
         Get
             Return m_Year
         End Get
-        Set(value As Boolean)
+        Set(value As String)
             m_Year = value
         End Set
     End Property

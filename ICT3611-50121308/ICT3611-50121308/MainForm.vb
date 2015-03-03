@@ -194,6 +194,7 @@ Public Class MainForm
                     dateActivate.Visible = False
                     chkActivated.Checked = True
 
+                    lblTitle.Text = line(1)
                     lblActYear.Text = line(4)
 
                     If line(2) = "Both Semesters" Then
@@ -208,7 +209,8 @@ Public Class MainForm
                     End If
 
                     Exit Do
-                Else
+                ElseIf line.Contains(lstModules.SelectedItem.ToString()) Then
+                    lblTitle.Text = line(1)
                     dateActivate.Visible = True
                     lblActYear.Visible = False
                     chkActivated.Checked = False
@@ -271,7 +273,35 @@ Public Class MainForm
                 End Try
             End If
         ElseIf modAct = 1 Then
+
+            Dim semester As String
+            If chkModSem1.Checked = True And chkModSem2.Checked = True Then
+                semester = "Both Semesters"
+            ElseIf chkModSem1.Checked = True Then
+                semester = "First Semester"
+            Else
+                semester = "Second Semester"
+            End If
+
+            Dim year As String
+            If dateActivate.Visible = True Then
+                year = dateActivate.Value.ToString("yyyy")
+            Else
+                year = lblActYear.Text
+            End If
+
             'Module Activation specific commits
+            Dim modl As Modules.modules
+            Try
+                modl = New Modules.modules()
+                modl.modifyModule(lstModules.SelectedItem.ToString(), lblTitle.Text, semester, chkActivated.CheckState, year)
+
+                'restart application to restore all vars to state of startup, also clears the forms... handy
+                Application.Restart()
+                Me.Refresh()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message, "Error")
+            End Try
         End If
     End Sub
 End Class

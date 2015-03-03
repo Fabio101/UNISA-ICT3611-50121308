@@ -30,6 +30,7 @@ Partial Class MainForm
         Me.GroupBox1 = New System.Windows.Forms.GroupBox()
         Me.pnlModAct = New System.Windows.Forms.Panel()
         Me.pnlActivate = New System.Windows.Forms.Panel()
+        Me.lblActYear = New System.Windows.Forms.Label()
         Me.lblSelected = New System.Windows.Forms.Label()
         Me.lblDate = New System.Windows.Forms.Label()
         Me.dateActivate = New System.Windows.Forms.DateTimePicker()
@@ -66,7 +67,8 @@ Partial Class MainForm
         Me.lblInfo = New System.Windows.Forms.Label()
         Me.btnSave = New System.Windows.Forms.Button()
         Me.btnClose = New System.Windows.Forms.Button()
-        Me.lblActYear = New System.Windows.Forms.Label()
+        Me.Label1 = New System.Windows.Forms.Label()
+        Me.lblTitle = New System.Windows.Forms.Label()
         Me.Functions.SuspendLayout()
         Me.GroupBox1.SuspendLayout()
         Me.pnlModAct.SuspendLayout()
@@ -150,6 +152,7 @@ Partial Class MainForm
         '
         'pnlActivate
         '
+        Me.pnlActivate.Controls.Add(Me.lblTitle)
         Me.pnlActivate.Controls.Add(Me.lblActYear)
         Me.pnlActivate.Controls.Add(Me.lblSelected)
         Me.pnlActivate.Controls.Add(Me.lblDate)
@@ -163,6 +166,14 @@ Partial Class MainForm
         Me.pnlActivate.Size = New System.Drawing.Size(401, 213)
         Me.pnlActivate.TabIndex = 11
         Me.pnlActivate.Visible = False
+        '
+        'lblActYear
+        '
+        Me.lblActYear.AutoSize = True
+        Me.lblActYear.Location = New System.Drawing.Point(95, 36)
+        Me.lblActYear.Name = "lblActYear"
+        Me.lblActYear.Size = New System.Drawing.Size(0, 13)
+        Me.lblActYear.TabIndex = 15
         '
         'lblSelected
         '
@@ -507,19 +518,29 @@ Partial Class MainForm
         Me.btnClose.Text = "Close"
         Me.btnClose.UseVisualStyleBackColor = True
         '
-        'lblActYear
+        'Label1
         '
-        Me.lblActYear.AutoSize = True
-        Me.lblActYear.Location = New System.Drawing.Point(95, 36)
-        Me.lblActYear.Name = "lblActYear"
-        Me.lblActYear.Size = New System.Drawing.Size(0, 13)
-        Me.lblActYear.TabIndex = 15
+        Me.Label1.AutoSize = True
+        Me.Label1.Location = New System.Drawing.Point(0, 0)
+        Me.Label1.Name = "Label1"
+        Me.Label1.Size = New System.Drawing.Size(39, 13)
+        Me.Label1.TabIndex = 8
+        Me.Label1.Text = "Label1"
+        '
+        'lblTitle
+        '
+        Me.lblTitle.AutoSize = True
+        Me.lblTitle.Location = New System.Drawing.Point(4, 114)
+        Me.lblTitle.Name = "lblTitle"
+        Me.lblTitle.Size = New System.Drawing.Size(0, 13)
+        Me.lblTitle.TabIndex = 16
         '
         'MainForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(686, 356)
+        Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.btnClose)
         Me.Controls.Add(Me.btnSave)
         Me.Controls.Add(Me.GroupBox1)
@@ -540,6 +561,7 @@ Partial Class MainForm
         Me.pnlStudentReg.ResumeLayout(False)
         Me.pnlStudentReg.PerformLayout()
         Me.ResumeLayout(False)
+        Me.PerformLayout()
 
     End Sub
     Friend WithEvents btnStudentReg As System.Windows.Forms.Button
@@ -587,5 +609,7 @@ Partial Class MainForm
     Friend WithEvents lblDate As System.Windows.Forms.Label
     Friend WithEvents lblSelected As System.Windows.Forms.Label
     Friend WithEvents lblActYear As System.Windows.Forms.Label
+    Friend WithEvents lblTitle As System.Windows.Forms.Label
+    Friend WithEvents Label1 As System.Windows.Forms.Label
 
 End Class
