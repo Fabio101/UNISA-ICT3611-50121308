@@ -1,6 +1,7 @@
 ﻿Imports Student
 Imports Modules
 Imports System.IO
+Imports Microsoft.VisualBasic.FileIO
 
 Public Class MainForm
 
@@ -125,7 +126,7 @@ Public Class MainForm
         lblInfo.Visible = True
 
         'Populate Module Activation listbox from file
-        Using MyReader As New Microsoft.VisualBasic.FileIO.TextFieldParser("modules.txt")
+        Using MyReader As New TextFieldParser("modules.txt")
             MyReader.TextFieldType = FileIO.FieldType.Delimited
             MyReader.SetDelimiters("|")
 
@@ -179,8 +180,44 @@ Public Class MainForm
         pnlModuleReg.Visible = False
     End Sub
 
-    Private Sub lstModules_SelectedValueChanged(sender As Object, e As EventArgs) Handles lstModules.SelectedValueChanged
+    Private Sub lstModules_SelectedIndexChanged(sender As Object, e As EventArgs) Handles lstModules.SelectedIndexChanged
         pnlActivate.Visible = True
+
+        'Check if the module is activated and prepopulate form objects accordingly
+        Using MyReader2 As New StreamReader("modules.txt")
+
+            Do While MyReader2.Peek() <> -1
+                Dim line() As String = MyReader2.ReadLine.Split("|")
+                If line.Contains(lstModules.SelectedItem.ToString()) And line.Contains("True") Then
+
+                    lblActYear.Visible = True
+                    dateActivate.Visible = False
+                    chkActivated.Checked = True
+
+                    lblActYear.Text = line(4)
+
+                    If line(2) = "Both Semesters" Then
+                        chkModSem1.Checked = True
+                        chkModSem2.Checked = True
+                    ElseIf line(2) = "First Semester" Then
+                        chkModSem1.Checked = True
+                        chkModSem2.Checked = False
+                    Else
+                        chkModSem1.Checked = False
+                        chkModSem2.Checked = True
+                    End If
+
+                    Exit Do
+                Else
+                    dateActivate.Visible = True
+                    lblActYear.Visible = False
+                    chkActivated.Checked = False
+                    chkModSem1.Checked = False
+                    chkModSem2.Checked = False
+                End If
+            Loop
+        End Using
+
     End Sub
 
     Private Sub btnStudentEnroll_Click(sender As Object, e As EventArgs) Handles btnStudentEnroll.Click
@@ -233,6 +270,8 @@ Public Class MainForm
                     MessageBox.Show(ex.Message, "Error")
                 End Try
             End If
+        ElseIf modAct = 1 Then
+            'Module Activation specific commits
         End If
     End Sub
 End Class

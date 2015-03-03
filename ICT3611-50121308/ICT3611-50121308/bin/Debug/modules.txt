@@ -1,3 +1,5 @@
-ICT3611|Advanced Graphical User Interface Programming|Both Semesters
-ICT3612|Advanced Internet Programming|Both Semesters
-ICT2611|Graphical User Interface programming|First Semester
+ICT3611|Advanced Graphical User Interface Programming|Both Semesters|True|2015
+ICT3612|Advanced Internet Programming|Both Semesters|False|0000
+ICT2611|Graphical User Interface programming|First Semester|True|2016
+ICT1511|Intro to Programming|First Semester|True|2017
+BSM1501|Introduction to Business Management|Second Semester|False|False

@@ -6,6 +6,8 @@ Public Class modules
     Private Property m_Code As String
     Private Property m_Title As String
     Private Property m_Semester As String
+    Private Property m_Active As Boolean
+    Private Property m_Year As Boolean
 
     Public Sub New(code As String, title As String, semester As String)
 
@@ -20,6 +22,8 @@ Public Class modules
             Me.Code = code
             Me.Title = title
             Me.Semester = semester
+            Me.Active = False
+            Me.Year = "0000"
         End If
 
         'Write student object data to modules file
@@ -27,7 +31,9 @@ Public Class modules
 
         textOut.Write(Me.Code & "|")
         textOut.Write(Me.Title & "|")
-        textOut.Write(Me.Semester & vbCrLf)
+        textOut.Write(Me.Semester & "|")
+        textOut.Write(Me.Active & "|")
+        textOut.Write(Me.Year & vbCrLf)
 
         textOut.Close()
 
@@ -58,6 +64,24 @@ Public Class modules
         End Get
         Set(value As String)
             m_Semester = value
+        End Set
+    End Property
+
+    Public Property Active As Boolean
+        Get
+            Return m_Active
+        End Get
+        Set(value As Boolean)
+            m_Active = value
+        End Set
+    End Property
+
+    Public Property Year As Boolean
+        Get
+            Return m_Year
+        End Get
+        Set(value As Boolean)
+            m_Year = value
         End Set
     End Property
 
