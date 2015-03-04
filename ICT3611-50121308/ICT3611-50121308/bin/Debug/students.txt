@@ -3,3 +3,21 @@
 1500037|Mr|Pather|7 Joyce Road Sea Cow Lake|09/04/1994|Male|
 1500046|Mr|Coetzee|Irene|Pretoria|08/01/1989|Male|ICT2611
 1500055|Mrs|Pinto|4 Eastliegh Avenue, Wendywood|10/01/1960|Female|ICT2611
+1500055|Mrs|Pinto|4 Eastliegh Avenue, Wendywood|10/01/1960|Female|ICT2611
+1500055|Mrs|Pinto|4 Eastliegh Avenue, Wendywood|10/01/1960|Female|ICT2611
+1500055|Mrs|Pinto|4 Eastliegh Avenue, Wendywood|10/01/1960|Female|ICT2611
+1500055|Mrs|Pinto|4 Eastliegh Avenue, Wendywood|10/01/1960|Female|ICT2611
+1500055|Mrs|Pinto|4 Eastliegh Avenue, Wendywood|10/01/1960|Female|ICT2611
+1500055|Mrs|Pinto|4 Eastliegh Avenue, Wendywood|10/01/1960|Female|ICT2611
+1500055|Mrs|Pinto|4 Eastliegh Avenue, Wendywood|10/01/1960|Female|ICT2611
+1500055|Mrs|Pinto|4 Eastliegh Avenue, Wendywood|10/01/1960|Female|ICT2611
+1500055|Mrs|Pinto|4 Eastliegh Avenue, Wendywood|10/01/1960|Female|ICT2611
+1500055|Mrs|Pinto|4 Eastliegh Avenue, Wendywood|10/01/1960|Female|ICT2611
+1500055|Mrs|Pinto|4 Eastliegh Avenue, Wendywood|10/01/1960|Female|ICT2611
+1500055|Mrs|Pinto|4 Eastliegh Avenue, Wendywood|10/01/1960|Female|ICT2611
+1500055|Mrs|Pinto|4 Eastliegh Avenue, Wendywood|10/01/1960|Female|ICT2611
+1500055|Mrs|Pinto|4 Eastliegh Avenue, Wendywood|10/01/1960|Female|ICT2611
+1500055|Mrs|Pinto|4 Eastliegh Avenue, Wendywood|10/01/1960|Female|ICT2611
+1400212|Mr|Pinto|MIdrand|01/03/1988|Male
+10|Mr|wtf|okkaraal|19/03/1988|Female
+1500239|Mr|Venter|JHB North|25/03/1955|Male

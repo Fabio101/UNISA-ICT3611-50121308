@@ -340,7 +340,49 @@ Public Class MainForm
                 MessageBox.Show("You must select a module from the list.", "Entry Error")
             End Try
         ElseIf stuEnr = 1 Then
+            Dim stu As Student.Student
+            Try
+                Dim moduleCode As String = lstActMod.SelectedItem.ToString()
+                stu = New Student.Student()
 
+                'stu.StudentNumber = txtStuNum.Text
+
+                Dim valid = validateStudentNumber(txtStuNum.Text)
+                MessageBox.Show(valid)
+
+                If Not valid = 0 Then
+                    MessageBox.Show("Invalid", "Failiure")
+                Else
+                    MessageBox.Show("Student Number is Valid", "Success")
+                End If
+
+            Catch ex As Exception
+                MessageBox.Show("You must select a Module to enroll for.", "Entry Error")
+            End Try
         End If
     End Sub
+
+    Public Function validateStudentNumber(studentnumber As Integer) As Integer
+        'Validate Student number
+        Dim Sum As Integer
+        Dim digit As Integer
+
+        Dim studentNumSum As Integer = studentnumber
+
+        While (studentNumSum <> 0)
+            digit = studentNumSum Mod 10
+            Sum = Sum + digit
+            studentNumSum = studentNumSum \ 10
+        End While
+
+        Dim remainder As Integer = Sum Mod 10
+
+        If remainder = 0 Then
+
+            Return remainder
+        Else
+            Return remainder
+        End If
+    End Function
+
 End Class

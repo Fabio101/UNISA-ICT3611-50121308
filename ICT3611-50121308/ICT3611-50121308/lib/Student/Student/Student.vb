@@ -10,7 +10,11 @@ Public Class Student
     Private Property m_Address As String
     Private Property m_DoB As String
     Private Property m_Gender As String
-    Private Property m_StudentNumber As String
+    Private Property m_StudentNumber As Integer
+
+    Public Sub New()
+
+    End Sub
 
     Public Sub New(title As String, initial As String, surname As String, address As String, dob As String, gender As String)
 
@@ -18,8 +22,8 @@ Public Class Student
         Dim path As String = "students.txt"
         Dim studentcount As Integer = IO.File.ReadAllLines(path).Length
 
-        'This gives us the last two digits of the year 
-        Dim curDate = DateAndTime.Year(Now).ToString
+        'This gives us the last two digits of the year
+        Dim curDate = DateAndTime.Year(Now).ToString()
         Dim dateYear = curDate.Substring(curDate.Length - 2)
 
         'Add 1 to number of students
@@ -28,8 +32,11 @@ Public Class Student
         'Padding
         Dim paddedNum As String = num.ToString().PadLeft(4, "0")
 
+        'Final number minus check digit
+        Dim StudentNumNoCheck As String = dateYear & paddedNum
+
         'Loop to add the sum of the digits of paddedNum to get check digit
-        Dim paddedNumSum As Integer = paddedNum
+        Dim paddedNumSum As Integer = StudentNumNoCheck
         Dim Sum As Integer
         Dim digit As Integer
 
@@ -41,12 +48,17 @@ Public Class Student
 
         'Get remainer of Sum divided by 10
         Dim Remainder As Integer = Sum Mod 10
+        Dim checkDigit As Integer
 
-        'Subtract remiander from 10 to get check digit
-        Dim checkDigit As Integer = 10 - Remainder
+        If Remainder = 0 Then
+            checkDigit = 0
+        Else
+            'Subtract remiander from 10 to get check digit
+            checkDigit = 10 - Remainder
+        End If
 
-        'Concatenate paddedNum with check digit
-        Dim StudentNum As String = dateYear & paddedNum & checkDigit
+        'Concatenate studentnumber not checked with check digit
+        Dim StudentNum As String = StudentNumNoCheck & checkDigit
 
 
         Me.Title = title
@@ -136,24 +148,8 @@ Public Class Student
         End Set
     End Property
 
-    Public Function validateStudentNumber(studentnumber As String) As Boolean
-        'Validate Student number
-        Dim Sum As Integer
-        Dim digit As Integer
+    Public Sub enrollStudent()
 
-        Dim studentNumSum As Integer = studentnumber
-
-        While (studentNumSum <> 0)
-            digit = studentNumSum Mod 10
-            Sum = Sum + digit
-            studentNumSum = studentNumSum / 10
-        End While
-
-        If Not Sum Mod 10 = 0 Then
-            Return False
-        Else
-            Return True
-        End If
-    End Function
+    End Sub
 
 End Class
