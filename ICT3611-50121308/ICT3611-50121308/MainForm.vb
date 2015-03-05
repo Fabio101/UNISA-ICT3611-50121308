@@ -145,8 +145,9 @@ Public Class MainForm
                     MsgBox("Line " & ex.Message & "is not valid line")
                 End Try
             End While
+            MyReader.Close()
+            MyReader.Dispose()
         End Using
-
     End Sub
 
     Private Sub btnClose_Click(sender As Object, e As EventArgs) Handles btnClose.Click
@@ -220,6 +221,8 @@ Public Class MainForm
                     lstEnrolled.Items.Add(line(0) & " " & line(1) & " " & line(2))
                 End If
             Loop
+            MyReader3.Close()
+            MyReader3.Dispose()
         End Using
     End Sub
 
@@ -260,8 +263,9 @@ Public Class MainForm
                     chkModSem2.Checked = False
                 End If
             Loop
+            MyReader2.Close()
+            MyReader2.Dispose()
         End Using
-
     End Sub
 
     Private Sub btnSave_Click(sender As Object, e As EventArgs) Handles btnSave.Click
@@ -331,7 +335,11 @@ Public Class MainForm
             Dim modl As Modules.modules
             Try
                 modl = New Modules.modules()
-                modl.modifyModule(lstModules.SelectedItem.ToString(), lblTitle.Text, semester, chkActivated.CheckState, year)
+                If modl.modifyModule(lstModules.SelectedItem.ToString(), lblTitle.Text, semester, chkActivated.CheckState, year) = True Then
+                    MessageBox.Show("Module successfulyl modified.", "Success")
+                Else
+                    MessageBox.Show("Unable to activate module less than 6 months in advance.", "Failiure")
+                End If
 
                 'restart application to restore all vars to state of startup, also clears the forms... handy
                 Application.Restart()
@@ -345,44 +353,21 @@ Public Class MainForm
                 Dim moduleCode As String = lstActMod.SelectedItem.ToString()
                 stu = New Student.Student()
 
-                'stu.StudentNumber = txtStuNum.Text
+                Dim valid As Boolean = stu.validateStudentNumber(txtStuNum.Text)
 
-                Dim valid = validateStudentNumber(txtStuNum.Text)
-                MessageBox.Show(valid)
-
-                If Not valid = 0 Then
-                    MessageBox.Show("Invalid", "Failiure")
+                If Not valid = True Then
+                    MessageBox.Show("Student Number is Invalid", "Failiure")
                 Else
-                    MessageBox.Show("Student Number is Valid", "Success")
+                    Dim enrolled As Boolean = stu.enrollStudent(txtStuNum.Text, moduleCode)
+                    If enrolled = True Then
+                        MessageBox.Show("Student succesfully enrolled for module.", "Success")
+                    Else
+                        MessageBox.Show("Student is already enrolled for this module.", "Failiure")
+                    End If
                 End If
-
             Catch ex As Exception
-                MessageBox.Show("You must select a Module to enroll for.", "Entry Error")
+                MessageBox.Show("You must select a module to enroll.", "Entry Error")
             End Try
         End If
     End Sub
-
-    Public Function validateStudentNumber(studentnumber As Integer) As Integer
-        'Validate Student number
-        Dim Sum As Integer
-        Dim digit As Integer
-
-        Dim studentNumSum As Integer = studentnumber
-
-        While (studentNumSum <> 0)
-            digit = studentNumSum Mod 10
-            Sum = Sum + digit
-            studentNumSum = studentNumSum \ 10
-        End While
-
-        Dim remainder As Integer = Sum Mod 10
-
-        If remainder = 0 Then
-
-            Return remainder
-        Else
-            Return remainder
-        End If
-    End Function
-
 End Class

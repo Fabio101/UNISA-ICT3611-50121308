@@ -1,5 +1,6 @@
-﻿ICT2611|Graphical User Interface programming|First Semester|True|2016
-ICT1511|Intro to Programming|First Semester|True|2017
+﻿ICT1511|Intro to Programming|First Semester|True|2017
 BSM1501|Introduction to Business Management|Second Semester|False|2018
 ICT3611|Advanced Graphical User Interface Programming|Both Semesters|False|2015
 ICT3612|Advanced Internet Programming|First Semester|True|2020
+ICT2611|Graphical User Interface programming|First Semester|True|2016
+INF3708|Software and Project Management|First Semester|True|2024

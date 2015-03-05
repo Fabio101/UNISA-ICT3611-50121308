@@ -1,5 +1,6 @@
 ﻿Imports System
 Imports System.IO
+Imports System.Text
 
 Public Class Student
 
@@ -25,9 +26,14 @@ Public Class Student
         'This gives us the last two digits of the year
         Dim curDate = DateAndTime.Year(Now).ToString()
         Dim dateYear = curDate.Substring(curDate.Length - 2)
+        Dim num As Integer
 
-        'Add 1 to number of students
-        Dim num As Integer = studentcount + 1
+        If studentcount = 0 Then
+            num = studentcount
+        Else
+            'Add 1 to number of students
+            num = studentcount + 1
+        End If
 
         'Padding
         Dim paddedNum As String = num.ToString().PadLeft(4, "0")
@@ -60,7 +66,6 @@ Public Class Student
         'Concatenate studentnumber not checked with check digit
         Dim StudentNum As String = StudentNumNoCheck & checkDigit
 
-
         Me.Title = title
         Me.Initial = initial
         Me.Surname = surname
@@ -72,17 +77,91 @@ Public Class Student
         'Write student object data to studentfile
         Dim textOut As New StreamWriter(New FileStream(path, FileMode.Append, FileAccess.Write))
 
-        textOut.Write(Me.StudentNumber & "|")
+        If studentcount = 0 Then
+            textOut.Write(Me.StudentNumber & "|")
+        Else
+            textOut.Write(vbCrLf & Me.StudentNumber & "|")
+        End If
+
         textOut.Write(Me.Title & "|")
         textOut.Write(Me.Surname & "|")
         textOut.Write(Me.Address & "|")
         textOut.Write(Me.DoB & "|")
-        textOut.Write(Me.Gender & vbCrLf)
+        textOut.Write(Me.Gender)
 
         textOut.Close()
-
+        textOut.Dispose()
     End Sub
 
+    Public Function validateStudentNumber(studentnumber As Integer) As Boolean
+        'Validate Student number
+        Dim Sum As Integer
+        Dim digit As Integer
+
+        Dim studentNumSum As Integer = studentnumber
+
+        While (studentNumSum <> 0)
+            digit = studentNumSum Mod 10
+            Sum = Sum + digit
+            studentNumSum = studentNumSum \ 10
+        End While
+
+        Dim remainder As Integer = Sum Mod 10
+
+        If remainder = 0 Then
+            Return True
+        Else
+            Return False
+        End If
+    End Function
+
+    Public Function enrollStudent(studentnumber As String, modulecode As String) As Boolean
+        Dim path As String = "students.txt"
+        'Read each line of student file and on match append module code to that line to enroll
+        Dim textIn As New StreamReader(New FileStream(path, FileMode.OpenOrCreate, FileAccess.ReadWrite))
+
+        Dim students As New List(Of Student)
+
+        Do While textIn.Peek <> 1
+            Dim row As String = textIn.ReadLine
+            Dim columns() As String = row.Split(CChar("|"))
+
+            'Matching time
+            If columns(0) = studentnumber And row.Contains(modulecode) Then
+                Return False
+            ElseIf columns(0) = studentnumber Then
+                Dim replaced As String = row.Insert(row.Length, "|" & modulecode)
+
+                textIn.Close()
+
+                Dim lines() As String
+                Dim outputlines As New List(Of String)
+                Dim searchString As String = studentnumber
+
+                lines = IO.File.ReadAllLines(path)
+
+                For Each line As String In lines
+                    If line.Contains(searchString) = False Then
+                        outputlines.Add(line)
+                    End If
+                Next
+                'Restore file data minus modified line
+                File.WriteAllLines(path, outputlines.ToArray(), Encoding.UTF8)
+
+                'Write modified student object data to modules file
+                Dim textOut As New StreamWriter(New FileStream(path, FileMode.Append, FileAccess.Write))
+
+                textOut.Write(replaced)
+
+                textOut.Close()
+
+                Return True
+            End If
+        Loop
+        textIn.Close()
+        textIn.Dispose()
+        Return False
+    End Function
 
     'Student Class Properies
     Public Property Title As String
@@ -147,9 +226,4 @@ Public Class Student
             m_StudentNumber = value
         End Set
     End Property
-
-    Public Sub enrollStudent()
-
-    End Sub
-
 End Class

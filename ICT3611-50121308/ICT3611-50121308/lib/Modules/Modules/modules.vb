@@ -44,13 +44,15 @@ Public Class modules
 
     End Sub
 
-    Public Sub modifyModule(code As String, title As String, semester As String, active As Boolean, year As String)
+    Public Function modifyModule(code As String, title As String, semester As String, active As Boolean, year As String) As Boolean
+
+        'Didnt manage with the 6 month restriction here... no more time...
 
         Me.Code = code
         Me.Title = title
-        Me.Semester = semester
         Me.Active = active
         Me.Year = year
+        Me.Semester = semester
 
         'Search all lines of module file for code value then rewrite the file without the found line, essentially deleting the line
         Dim lines() As String
@@ -78,8 +80,8 @@ Public Class modules
         textOut.Write(Me.Year & vbCrLf)
 
         textOut.Close()
-
-    End Sub
+        Return True
+    End Function
 
     'Modules Class Properies
     Public Property Code As String
