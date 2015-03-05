@@ -1,20 +1,6 @@
-1500019|Mr|Pinto|302 Harry Galaun Drive|11/10/1988|Male|ICT3612
-1500028|Miss|Pather|Unit 8 Adar Gardens|10/11/1989|Female|ICT1511
-1500037|Mr|Pather|7 Joyce Road Sea Cow Lake|09/04/1994|Male|
-1500046|Mr|Coetzee|Irene|Pretoria|08/01/1989|Male|ICT2611
-1500055|Mrs|Pinto|4 Eastliegh Avenue, Wendywood|10/01/1960|Female|ICT2611
-1500055|Mrs|Pinto|4 Eastliegh Avenue, Wendywood|10/01/1960|Female|ICT2611
-1500055|Mrs|Pinto|4 Eastliegh Avenue, Wendywood|10/01/1960|Female|ICT2611
-1500055|Mrs|Pinto|4 Eastliegh Avenue, Wendywood|10/01/1960|Female|ICT2611
-1500055|Mrs|Pinto|4 Eastliegh Avenue, Wendywood|10/01/1960|Female|ICT2611
-1500055|Mrs|Pinto|4 Eastliegh Avenue, Wendywood|10/01/1960|Female|ICT2611
-1500055|Mrs|Pinto|4 Eastliegh Avenue, Wendywood|10/01/1960|Female|ICT2611
-1500055|Mrs|Pinto|4 Eastliegh Avenue, Wendywood|10/01/1960|Female|ICT2611
-1500055|Mrs|Pinto|4 Eastliegh Avenue, Wendywood|10/01/1960|Female|ICT2611
-1500055|Mrs|Pinto|4 Eastliegh Avenue, Wendywood|10/01/1960|Female|ICT2611
-1500055|Mrs|Pinto|4 Eastliegh Avenue, Wendywood|10/01/1960|Female|ICT2611
-1500055|Mrs|Pinto|4 Eastliegh Avenue, Wendywood|10/01/1960|Female|ICT2611
-1500055|Mrs|Pinto|4 Eastliegh Avenue, Wendywood|10/01/1960|Female|ICT2611
-1500055|Mrs|Pinto|4 Eastliegh Avenue, Wendywood|10/01/1960|Female|ICT2611
-1500055|Mrs|Pinto|4 Eastliegh Avenue, Wendywood|10/01/1960|Female|ICT2611
-1500055|Mrs|Pinto|4 Eastliegh Avenue, Wendywood|10/01/1960|Female|ICT2611
+﻿1500022|Miss|Pather|Midrand|12/05/1989|Female
+1500031|Mr|van der Vyer|Centurian|18/05/1974|Male
+1500004|Mr|Pinto|Midrand|11/05/1988|Male|ICT3612|ICT1511|ICT2611
+1500040|Mr|Rickman|Vorna VAlley|45/05/1974|Male|ICT2611
+1500059|Mrs|Pinto|Wendywood 2144|48/05/1964|Female
+1500068|Dr|Jay|New York|53/05/1981|Male
