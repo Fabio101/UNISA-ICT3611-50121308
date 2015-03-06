@@ -1,22 +1,21 @@
 # unisa-ict3611-50121308
-Assignment 1 for Module ICT3611
 
-UNISA Assignment 1 for 'Advanced' Graphical User Interface Programming.
+UNISA Assignment 1 for 'Advanced' Graphical User Interface Programming Module.
 * Student/Module management system
  * Visual Basic
  * Data to Text Files
 
-Load Screen
+## Load Screen
 ![load](img/LoadScreen.PNG)
 
-Student Registrations
+## Student Registrations
 ![StuReg](img/StuReg.PNG)
 
-Module Registrations
+## Module Registrations
 ![ModReg](img/ModReg.PNG)
 
-Module Semester Activations
+## Module Semester Activations
 ![ModAct](img/ModAct.PNG)
 
-Student Enrollments to MOdules
+## Student Enrollments to MOdules
 ![StuEnr](img/StuEnr.PNG)
