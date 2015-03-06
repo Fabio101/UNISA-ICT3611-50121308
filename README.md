@@ -17,5 +17,5 @@ UNISA Assignment 1 for 'Advanced' Graphical User Interface Programming Module.
 ## Module Semester Activations
 ![ModAct](img/ModAct.PNG)
 
-## Student Enrollments to MOdules
+## Student Enrollments for Modules
 ![StuEnr](img/StuEnr.PNG)
