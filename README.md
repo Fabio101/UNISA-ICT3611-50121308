@@ -7,16 +7,16 @@ UNISA Assignment 1 for 'Advanced' Graphical User Interface Programming.
  * Data to Text Files
 
 Load Screen
-![load](img/LoadScreen.png)
+![load](img/LoadScreen.PNG)
 
 Student Registrations
-![StuReg](img/reg.png)
+![StuReg](img/reg.PNG)
 
 Module Registrations
-![ModReg](img/ModReg.png)
+![ModReg](img/ModReg.PNG)
 
 Module Semester Activations
-![ModAct](img/ModAct.png)
+![ModAct](img/ModAct.PNG)
 
 Student Enrollments to MOdules
-![StuEnr](img/StuEnr.png)
+![StuEnr](img/StuEnr.PNG)
