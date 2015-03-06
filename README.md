@@ -10,7 +10,7 @@ Load Screen
 ![load](img/LoadScreen.PNG)
 
 Student Registrations
-![StuReg](img/reg.PNG)
+![StuReg](img/StuReg.PNG)
 
 Module Registrations
 ![ModReg](img/ModReg.PNG)
