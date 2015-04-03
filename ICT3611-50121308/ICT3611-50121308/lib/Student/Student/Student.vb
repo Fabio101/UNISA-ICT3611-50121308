@@ -1,6 +1,7 @@
 ﻿Imports System
 Imports System.IO
 Imports System.Text
+Imports DB.dataSQL
 
 Public Class Student
 
