@@ -1,6 +1,10 @@
 C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\lib\Student\Student\bin\Debug\Student.dll
 C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\lib\Student\Student\bin\Debug\Student.pdb
 C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\lib\Student\Student\bin\Debug\Student.xml
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\lib\Student\Student\bin\Debug\DB.dll
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\lib\Student\Student\bin\Debug\DB.pdb
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\lib\Student\Student\bin\Debug\DB.xml
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\lib\Student\Student\obj\Debug\Student.vbprojResolveAssemblyReference.cache
 C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\lib\Student\Student\obj\Debug\Student.Resources.resources
 C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\lib\Student\Student\obj\Debug\Student.vbproj.GenerateResource.Cache
 C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\lib\Student\Student\obj\Debug\Student.dll

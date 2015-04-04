@@ -19,7 +19,6 @@ Public Class Student
     End Sub
 
     Public Sub New(title As String, initial As String, surname As String, address As String, dob As String, gender As String)
-
         'Student text file + line count for student number generation
         Dim path As String = "students.txt"
         Dim studentcount As Integer = IO.File.ReadAllLines(path).Length
@@ -76,22 +75,27 @@ Public Class Student
         Me.StudentNumber = StudentNum
 
         'Write student object data to studentfile
-        Dim textOut As New StreamWriter(New FileStream(path, FileMode.Append, FileAccess.Write))
+        'Dim textOut As New StreamWriter(New FileStream(path, FileMode.Append, FileAccess.Write))
 
-        If studentcount = 0 Then
-            textOut.Write(Me.StudentNumber & "|")
-        Else
-            textOut.Write(vbCrLf & Me.StudentNumber & "|")
-        End If
+        'If studentcount = 0 Then
+        'textOut.Write(Me.StudentNumber & "|")
+        'Else
+        'textOut.Write(vbCrLf & Me.StudentNumber & "|")
+        'End If
 
-        textOut.Write(Me.Title & "|")
-        textOut.Write(Me.Surname & "|")
-        textOut.Write(Me.Address & "|")
-        textOut.Write(Me.DoB & "|")
-        textOut.Write(Me.Gender)
+        'textOut.Write(Me.Title & "|")
+        'textOut.Write(Me.Surname & "|")
+        'textOut.Write(Me.Address & "|")
+        'textOut.Write(Me.DoB & "|")
+        'textOut.Write(Me.Gender)
 
-        textOut.Close()
-        textOut.Dispose()
+        'textOut.Close()
+        'textOut.Dispose()
+
+        'Add to database
+        Dim add = New DB.dataSQL
+        add.addNew(Me.StudentNumber, title, initial, surname, address, dob, gender)
+
     End Sub
 
     Public Function validateStudentNumber(studentnumber As Integer) As Boolean

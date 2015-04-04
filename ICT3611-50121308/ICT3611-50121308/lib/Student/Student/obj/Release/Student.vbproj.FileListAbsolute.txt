@@ -6,3 +6,7 @@ C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\lib\Student\
 C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\lib\Student\Student\obj\Release\Student.dll
 C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\lib\Student\Student\obj\Release\Student.xml
 C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\lib\Student\Student\obj\Release\Student.pdb
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\lib\Student\Student\bin\Release\DB.dll
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\lib\Student\Student\bin\Release\DB.pdb
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\lib\Student\Student\bin\Release\DB.xml
+C:\Users\fabz\Desktop\Assignment1\ICT3611-50121308\ICT3611-50121308\lib\Student\Student\obj\Release\Student.vbprojResolveAssemblyReference.cache

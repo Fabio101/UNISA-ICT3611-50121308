@@ -46,6 +46,10 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DB, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>lib\Model\DB\DB\bin\Debug\DB.dll</HintPath>
+    </Reference>
     <Reference Include="Modules">
       <HintPath>lib\Modules\Modules\bin\Release\Modules.dll</HintPath>
     </Reference>
