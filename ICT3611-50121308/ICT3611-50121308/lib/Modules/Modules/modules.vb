@@ -18,30 +18,36 @@ Public Class modules
     Public Sub New(code As String, title As String, semester As String)
 
         'Modules text file + Search for module code in textfile
-        Dim path As String = "modules.txt"
-        Dim text As String = IO.File.ReadAllText(path)
+        'Dim path As String = "modules.txt"
+        'Dim text As String = IO.File.ReadAllText(path)
 
-        Dim index As Integer = text.IndexOf(code)
-        If index >= 0 Then
-            Throw New System.Exception("Module Code already exists.")
-        Else
-            Me.Code = code
-            Me.Title = title
-            Me.Semester = semester
-            Me.Active = False
-            Me.Year = "0000"
-        End If
+        'Dim index As Integer = text.IndexOf(code)
+        'If index >= 0 Then
+        'Throw New System.Exception("Module Code already exists.")
+        'Else
+        'Me.Code = code
+        'Me.Title = title
+        'Me.Semester = semester
+        'Me.Active = False
+        'Me.Year = "0000"
+        'End If
+
+        Me.Code = code
+        Me.Title = title
+        Me.Semester = semester
+        Me.Active = False
+        Me.Year = "0000"
 
         'Write student object data to modules file
-        Dim textOut As New StreamWriter(New FileStream(path, FileMode.Append, FileAccess.Write))
+        'Dim textOut As New StreamWriter(New FileStream(path, FileMode.Append, FileAccess.Write))
 
-        textOut.Write(Me.Code & "|")
-        textOut.Write(Me.Title & "|")
-        textOut.Write(Me.Semester & "|")
-        textOut.Write(Me.Active & "|")
-        textOut.Write(Me.Year & vbCrLf)
+        'textOut.Write(Me.Code & "|")
+        'textOut.Write(Me.Title & "|")
+        'textOut.Write(Me.Semester & "|")
+        'textOut.Write(Me.Active & "|")
+        'textOut.Write(Me.Year & vbCrLf)
 
-        textOut.Close()
+        'textOut.Close()
 
         'Add to database
         Dim add = New DB.dataSQL
