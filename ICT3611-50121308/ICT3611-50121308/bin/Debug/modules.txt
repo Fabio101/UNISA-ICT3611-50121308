@@ -4,3 +4,6 @@ ICT3611|Advanced Graphical User Interface Programming|Both Semesters|False|2015
 ICT3612|Advanced Internet Programming|First Semester|True|2020
 ICT2611|Graphical User Interface programming|First Semester|True|2016
 INF3708|Software and Project Management|First Semester|True|2024
+ICT3708|Software Project Management|First Semester|False|0000
+ICT3617|Advanced Graphical User INterface Programming|Both Semesters|False|0000
+INFJ1|Phsycology |Second Semester|False|0000

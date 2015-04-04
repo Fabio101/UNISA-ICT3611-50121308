@@ -38,3 +38,5 @@
 1500383|Mr|Pinto|Wendywood Manor|22/04/1988|Male
 1500392|Mr|Pinto|Wendywood|30/04/1988|Male
 1500400|Miss|Pather|Vorna Valley, Midrand|31/04/1989|Female
+1500419|Master|Baggins|The Shire|49/04/1965|Male
+1500428|Miss|Banyard|Randburg|12/04/1987|Female

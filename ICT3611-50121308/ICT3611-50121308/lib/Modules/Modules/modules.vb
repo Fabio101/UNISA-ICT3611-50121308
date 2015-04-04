@@ -1,6 +1,7 @@
 ﻿Imports System
 Imports System.Text
 Imports System.IO
+Imports DB.dataSQL
 
 Public Class modules
 
@@ -41,6 +42,10 @@ Public Class modules
         textOut.Write(Me.Year & vbCrLf)
 
         textOut.Close()
+
+        'Add to database
+        Dim add = New DB.dataSQL
+        add.addNewMod(Me.Code, Me.Title, Me.Semester, Me.Active, Me.Year)
 
     End Sub
 
